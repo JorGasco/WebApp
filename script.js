@@ -48,12 +48,13 @@ redbtn.addEventListener("click", () => {
     = `<p> Hello, ${username}, looking forward to hearing your playlists!.</p>
     <p> Click this message to close it.</p>`;
   welcomeUserDiv.style.cursor = "pointer";
+  let welcomeUserDiv = document.querySelector("#welcomeuser");
 
 
-  
-  
 });
 
-welcomeUserDiv.addEventListener("click", () => {welcomeuserDiv.style.display = "none"
-                                               
+const welcomeuser = document.querySelector("#welcomeuser");
+welcomeuser.addEventListener("click", () => {
+  let welcomeUserDivv = document.querySelector("#welcomeuser");
+   welcomeUserDivv.style.display = "none";
 });
