@@ -24,6 +24,8 @@ const greenbtn = document.querySelector(".green");
 
 greenbtn.addEventListener("click", () => alert("Thanks! You're okay too"));
 
+
+
 const bluebtn = document.querySelector(".blue");
 
 bluebtn.addEventListener("click", () => {
@@ -43,6 +45,15 @@ redbtn.addEventListener("click", () => {
   let welcomeUserDiv = document.querySelector("#welcomeuser");
   welcomeUserDiv.style.display = "block";
   document.querySelector("#welcomeuser").innerHTML 
-    = `<p> Hello, ${username}, looking forward to hearing your playlists!.</p>`;
+    = `<p> Hello, ${username}, looking forward to hearing your playlists!.</p>
+    <p> Click this message to close it.</p>`;
   welcomeUserDiv.style.cursor = "pointer";
+
+
+  
+  
+});
+
+welcomeUserDiv.addEventListener("click", () => {welcomeuserDiv.style.display = "none"
+                                               
 });
