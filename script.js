@@ -72,8 +72,22 @@ const sonatas = {
     {
       title: 'Piano Sonata No. 10',
       artist: 'Beethoven',
+    },
+    {
+      title: 'Nocturne Op 9 No 2 (E Flat Major)',
+      artist: 'Chopin',
     }
-  ]
+  ],
+getRating() {
+    let userRating = parseInt(prompt("Rate this collection (from 1 to 5 stars)"));
+    if (userRating > 5 || userRating < 1 || isNaN(userRating)) {
+      alert("Try again with a number between 1 and 5!");
+    } 
+    else {
+      document.querySelector("#rating").innerHTML = `You gave a rating of: ${userRating}`;
+    }
+}
+
 };
 
 
@@ -91,4 +105,16 @@ for (let thesong of sonatas.songs) {
 }
 
 $("#tableoutput").append(`</tbody></table>`);
+$("#tableoutput").append(`<p><span id="rating"> </span></p>`);
+$("#tableoutput").append(
+    `<button class="ui blue button" id = "ratingbtn"> Rate it! 
+            <i class="star icon"></i>
+    </button>`
+);
+
+  let rbtn = $('#ratingbtn');
+  rbtn.on('click', () => {
+    sonatas.getRating();
+  })
+
 
