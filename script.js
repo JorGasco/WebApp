@@ -58,3 +58,37 @@ welcomeUserDiv &&
     welcomeUserDiv.style.display = "none";
   });
 
+const sonatas = {
+  title: 'Beethoven Sonatas',
+  songs: [
+    {
+      title: 'Piano Sonata No. 3',
+      artist: 'Beethoven',
+    },
+    {
+      title: 'Piano Sonata No. 7',
+      artist: 'Beethoven',
+    },
+    {
+      title: 'Piano Sonata No. 10',
+      artist: 'Beethoven',
+    }
+  ]
+};
+
+
+$("#tableoutput").html(`<h2 class='ui header'> ${sonatas.title}</h2>`);
+$("#tableoutput").append(
+    `<table class='ui fixed striped table'><thead><tr><th>Song</th>
+                 <th>Artist</th></tr>
+     </thead>
+     <tbody>`
+);
+
+for (let thesong of sonatas.songs) {
+    $("#tableoutput tbody").append(
+      `<tr><td>${thesong.title}</td><td>${thesong.artist}</td></tr>`);
+}
+
+$("#tableoutput").append(`</tbody></table>`);
+
