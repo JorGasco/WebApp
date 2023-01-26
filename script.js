@@ -84,7 +84,9 @@ getRating() {
       alert("Try again with a number between 1 and 5!");
     } 
     else {
-      document.querySelector("#rating").innerHTML = `You gave a rating of: ${userRating}`;
+      document.querySelector("#rating").innerHTML = `You gave a rating of: ${
+      
+    }`;
     }
 }
 
