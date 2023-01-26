@@ -20,41 +20,41 @@ console.log(answer)
 
 document.write("you answer is " + answer + " ! <br>");
 */
+console.log("Hello from the Web App Dev 1 lab!");
+
 const greenbtn = document.querySelector(".green");
 
-greenbtn.addEventListener("click", () => alert("Thanks! You're okay too"));
-
-
+greenbtn &&
+  greenbtn.addEventListener("click", () => alert("Thanks! You're okay too"));
 
 const bluebtn = document.querySelector(".blue");
 
-bluebtn.addEventListener("click", () => {
+bluebtn &&
+  bluebtn.addEventListener("click", () => {
     let readMoreDiv = document.querySelector("#readmore");
     if (readMoreDiv.style.display === "block") {
       readMoreDiv.style.display = "none";
     } else {
       readMoreDiv.style.display = "block";
     }
-});
-
+  });
 
 const redbtn = document.querySelector(".red");
 
-redbtn.addEventListener("click", () => {
-  let username = prompt("What's your name?");
-  let welcomeUserDiv = document.querySelector("#welcomeuser");
-  welcomeUserDiv.style.display = "block";
-  document.querySelector("#welcomeuser").innerHTML 
-    = `<p> Hello, ${username}, looking forward to hearing your playlists!.</p>
-    <p> Click this message to close it.</p>`;
-  welcomeUserDiv.style.cursor = "pointer";
-  let welcomeUserDiv = document.querySelector("#welcomeuser");
+const welcomeUserDiv = document.querySelector("#welcomeuser");
 
+redbtn &&
+  redbtn.addEventListener("click", () => {
+    let username = prompt("What's your name?");
+    welcomeUserDiv.style.display = "block";
+    document.querySelector("#welcomeuser").innerHTML = `<p> Hello, ${username},
+    looking forward to hearing your playlists! Click this message to close it.</p>`;
+    welcomeUserDiv.style.cursor = "pointer";
+  });
 
-});
+welcomeUserDiv &&
+  welcomeUserDiv.addEventListener("click", (evt) => {
+   // evt.currentTarget.style.display = "none";
+    welcomeUserDiv.style.display = "none";
+  });
 
-const welcomeuser = document.querySelector("#welcomeuser");
-welcomeuser.addEventListener("click", () => {
-  let welcomeUserDivv = document.querySelector("#welcomeuser");
-   welcomeUserDivv.style.display = "none";
-});
