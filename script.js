@@ -84,11 +84,12 @@ getRating() {
       alert("Try again with a number between 1 and 5!");
     } 
     else {
-      document.querySelector("#rating").innerHTML = `You gave a rating of: ${
-      
-    }`;
+      document.querySelector("#rating").innerHTML = `You gave a rating of: `;
+    for (let i = 1; i <= userRating; i++) {
+      document.querySelector("#rating").innerHTML += `<i class='yellow star icon'></i>`;
     }
-}
+  }
+    }
 
 };
 
