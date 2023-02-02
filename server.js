@@ -4,6 +4,7 @@
 // import all required modules
 import express from "express";
 import path from 'path';
+import logger from "./utils/logger.js";
 import { fileURLToPath } from 'url';
 
 // initialise project
@@ -20,6 +21,6 @@ app.get("/", function(request, response) {
 });
 
 // listen for requests :)
-const listener = app.listen(process.env.PORT, function() {
-  console.log("Your app is listening on port " + listener.address().port);
+const listener = app.listen(process.env.PORT || 4000, function () {
+  logger.info('Your app is listening on port ' + listener.address().port);
 });
