@@ -2,55 +2,72 @@
   "playlistCollection": [
     
     {
+       "id": "01",
       "title": "Beethoven Sonatas",
       "songs": [
         {
-          "id": "01",
+         "id": "02",
           "title": "Piano Sonata No. 3",
-          "artist": "Beethoven"
+          "artist": "Beethoven",
+          "duration": "5:00"
         },
         {
+          "id": "03",
           "title": "Piano Sonata No. 7",
-          "artist": "Beethoven"
+          "artist": "Beethoven",
+          "duration": "5:00"
         },
         {
+          "id": "04",
           "title": "Piano Sonata No. 10",
-          "artist": "Beethoven"
-        }
-      ]
-    },
-    {
-      "title": "Beethoven Concertos",
-      "songs": [
-        {
-          "title": "Piano Concerto No. 0",
-          "artist": "Beethoven"
-        },
-        {
-          "title": "Piano Concerto No. 4",
-          "artist": "Beethoven"
-        },
-        {
-          "title": "Piano Concerto No. 6",
-          "artist": "Beethoven"
+          "artist": "Beethoven",
+          "duration": "5:00"
         }
       ]
     },
     
-    {
+    {"id": "001",
+      "title": "Beethoven Concertos",
+      "songs": [
+        {
+          "id": "002",
+          "title": "Piano Concerto No. 0",
+          "artist": "Beethoven",
+          "duration": "5:00"
+        },
+        {"id": "003",
+          "title": "Piano Concerto No. 4",
+          "artist": "Beethoven",
+          "duration": "5:00"
+        },
+        {"id": "004",
+          "title": "Piano Concerto No. 6",
+          "artist": "Beethoven",
+          "duration": "5:00"
+        }
+      ]
+    },
+    
+    {"id": "0001",
       "title": "Chopin nocturne",
       "songs": [
         {
+          "id": "0002",
           "title": "Nocturne in B major",
-          "artist": "Chopin"
+          "artist": "Chopin",
+          "duration": "5:00"
         },
         {
+          "id": "0003",
           "title": "Nocturne in B major",
-          "artist": "Chopin"
+          "artist": "Chopin",
+          "duration": "5:00"
         },
         {
+          "id": "0004",
           "title": "Nocturnes, Op. 9 : No. 2 in E Flat Major",
-          "artist": "Chopin"
+          "artist": "Chopin",
+          "duration": "5:00"
         }
       ]
     }
