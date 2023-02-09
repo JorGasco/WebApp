@@ -58,66 +58,21 @@ welcomeUserDiv &&
     welcomeUserDiv.style.display = "none";
   });
 
-const sonatas = {
-  title: 'Beethoven Sonatas',
-  songs: [
-    {
-      title: 'Piano Sonata No. 3',
-      artist: 'Beethoven',
-    },
-    {
-      title: 'Piano Sonata No. 7',
-      artist: 'Beethoven',
-    },
-    {
-      title: 'Piano Sonata No. 10',
-      artist: 'Beethoven',
-    },
-    {
-      title: 'Nocturne Op 9 No 2 (E Flat Major)',
-      artist: 'Chopin',
-    }
-  ],
-getRating() {
-    let userRating = parseInt(prompt("Rate this collection (from 1 to 5 stars)"));
-    if (userRating > 5 || userRating < 1 || isNaN(userRating)) {
-      alert("Try again with a number between 1 and 5!");
-    } 
-    else {
-      document.querySelector("#rating").innerHTML = `You gave a rating of: `;
-    for (let i = 1; i <= userRating; i++) {
-      document.querySelector("#rating").innerHTML += `<i class='yellow star icon'></i>`;
+const ratebtn  = document.querySelector("#rateit");
+
+ratebtn &&
+  ratebtn.addEventListener("click", () => {
+   let userRating = parseInt(prompt("Rate this collection (from 1 to 5 stars)"));
+  if (userRating>5 || userRating<1 || isNaN(userRating)){
+    alert("Try again with a number between 1 and 5!");
+  }
+  else{
+
+    document.querySelector("#rating").innerHTML = "You gave a rating of: ";
+    for (let i=0; i < userRating; i++){
+        document.querySelector("#rating").innerHTML +="<i class='yellow star icon'></i>";
     }
   }
-    }
-
-};
-
-
-$("#tableoutput").html(`<h2 class='ui header'> ${sonatas.title}</h2>`);
-$("#tableoutput").append(
-    `<table class='ui fixed striped table'><thead><tr><th>Song</th>
-                 <th>Artist</th></tr>
-     </thead>
-     <tbody>`
-);
-
-for (let thesong of sonatas.songs) {
-    $("#tableoutput tbody").append(
-      `<tr><td>${thesong.title}</td><td>${thesong.artist}</td></tr>`);
-}
-
-$("#tableoutput").append(`</tbody></table>`);
-$("#tableoutput").append(`<p><span id="rating"> </span></p>`);
-$("#tableoutput").append(
-    `<button class="ui blue button" id = "ratingbtn"> Rate it! 
-            <i class="star icon"></i>
-    </button>`
-);
-
-  let rbtn = $('#ratingbtn');
-  rbtn.on('click', () => {
-    sonatas.getRating();
-  })
+});
 
 
