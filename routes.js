@@ -10,7 +10,7 @@ import dashboard from './controllers/dashboard.js';
 import about from './controllers/about.js';
 
 // connect routes to controllers
-router.get('/welcome', welcome.index);
+router.get('/', welcome.index);
 router.get('/dashboard', dashboard.index);
 router.get('/about', about.index);
 

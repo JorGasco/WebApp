@@ -22,5 +22,5 @@ const welcome = {
   },
 };
 
-// export the start module
+// export the welcome module
 export default welcome;

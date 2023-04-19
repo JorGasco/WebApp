@@ -14,7 +14,7 @@ const about = {
 
     // create view data object (contains data to be sent to the view e.g. page title)
     const viewData = {
-      title: 'Play list App Developers',
+      title: 'Company Owner',
       developers: developerStore.getAllDevelopers(),
     };
 
