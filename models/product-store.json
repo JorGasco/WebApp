@@ -1,0 +1,73 @@
+{
+  "companyProductCollection": [
+    {
+      "id": "01",
+      "name": "Fitness Products",
+      "description": "A collection of fitness products designed for people who want to stay active and healthy",
+      "products": [
+        {
+          "id": "02",
+          "name": "Smart Fitness Tracker",
+          "description": "A fitness tracker that monitors your activity, sleep, heart rate, and other health metrics",
+          "price": 99.99,
+          "category": "Wearable technology",
+          "image": "smart-fitness-tracker.jpg"
+        },
+        {
+          "id": "03",
+          "name": "Resistance Bands Set",
+          "description": "A set of resistance bands that you can use for strength training, stretching, and mobility exercises",
+          "price": 39.99,
+          "category": "Fitness equipment",
+          "image": "resistance-bands.jpg"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "name": "Home Decor Products",
+      "description": "A collection of home decor products designed to make your living space more comfortable and stylish",
+      "products": [
+        {
+          "id": "04",
+          "name": "Modern Area Rug",
+          "description": "A high-quality area rug that adds a pop of color and texture to your living room or bedroom",
+          "price": 149.99,
+          "category": "Home decor",
+          "image": "modern-area-rug.jpg"
+        },
+        {
+          "id": "05",
+          "name": "Wall Art Set",
+          "description": "A set of minimalist wall art prints that add a touch of sophistication to any room",
+          "price": 69.99,
+          "category": "Home decor",
+          "image": "wall-art-set.jpg"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "name": "Tech Products",
+      "description": "A collection of tech products designed to make your life easier and more enjoyable",
+      "products": [
+        {
+          "id": "06",
+          "name": "Wireless Headphones",
+          "description": "High-quality wireless headphones that provide clear and immersive sound",
+          "price": 129.99,
+          "category": "Audio",
+          "image": "wireless-headphones.jpg"
+        },
+        {
+          "id": "07",
+          "name": "Smart Home Speaker",
+          "description": "A smart speaker that can play music, answer questions, and control your smart home devices",
+          "price": 199.99,
+          "category": "Smart home",
+          "image": "smart-speaker.jpg"
+        }
+      ]
+    }
+  ]
+}

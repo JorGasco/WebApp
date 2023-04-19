@@ -2,26 +2,24 @@
 
 // import all required modules
 import logger from '../utils/logger.js';
-import playlistStore from '../models/playlist-store.js';
+import productStore from '../models/product-store.js';
 
 // create dashboard object
 const dashboard = {
 
-  // index method - responsible for creating and rendering the view
-  index(request, response) {
+// index method - responsible for creating and rendering the view
+index(request, response) {// display confirmation message in log
+logger.info('dashboard rendering');
 
-    // display confirmation message in log
-    logger.info('dashboard rendering');
+// create view data object (contains data to be sent to the view e.g. page title)
+const viewData = {
+  title: 'Company Product Collection Dashboard',
+  products: productStore.getAllProducts(),
+};
 
-    // create view data object (contains data to be sent to the view e.g. page title)
-    const viewData = {
-      title: 'Playlist App Dashboard',
-      playlists: playlistStore.getAllPlaylists(),
-    };
-
-    // render the dashboard view and pass through the data
-    logger.info('about to render', viewData.playlists);
-    response.render('dashboard', viewData);
+// render the dashboard view and pass through the data
+logger.info('about to render', viewData.products);
+response.render('dashboard', viewData);
   },
 };
 

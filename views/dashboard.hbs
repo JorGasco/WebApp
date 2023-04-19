@@ -1,18 +1,25 @@
 {{> menu id="dashboard"}}
 
 <section class="ui segment">
-  {{#each playlists}}
-      <h2 class="ui header">
-        {{title}}
-      </h2>
-      {{> listsongs}}
+  {{#each products}}
+    <h2 class="ui header">
+      {{name}}
+    </h2>
+    <div class="ui two column grid">
+      <div class="column">
+        <img class="ui fluid image" src="{{image}}" alt="{{name}}">
+      </div>
+      <div class="column">
+        <p>{{description}}</p>
+        <p>Price: ${{price}}</p>
+        <p>Category: {{category}}</p>
+      </div>
+    </div>
   {{/each}}
-
- <p>
-  <span id="rating"></span>
-</p>
-
-  <button class="ui blue button" id = "rateit">
+  <p>
+    <span id="rating"></span>
+  </p>
+  <button class="ui blue button" id="rateit">
     Rate it! <i class="star icon"></i>
   </button>
 </section>
