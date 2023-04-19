@@ -4,27 +4,49 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
-   <title>{{title}}</title>
+    <title>{{title}}</title>
 
-    <!-- import the SemanticUI stylesheet -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" type="text/css">
+    <!-- Import the SemanticUI stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" type="text/css">
 
-  <!-- import the webpage's stylesheet -->
-  <link rel="stylesheet" href="/style.css">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
+    <!-- Header section -->
+    <header class="ui container">
+      <h1 class="ui header">{{title}}</h1>
+      <nav class="ui secondary pointing menu">
+        <a class="item active" href="/">Home</a>
+        <a class="item" href="/dashboard">Dashboard</a>
+        <a class="item" href="/collection-details">Collection Details</a>
+        <a class="item" href="/about">About</a>
+      </nav>
+    </header>
+
+    <!-- Main content section -->
     <section class="ui container">
-       {{{body}}}
+      {{{body}}}
     </section>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
-     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
-     crossorigin="anonymous">
-    </script>
-    <!-- import the SemanticUI javascript file -->   
+
+    <!-- Footer section -->
+    <footer class="ui container">
+      <div class="ui horizontal divider">Follow us on social media</div>
+      <div class="ui four item horizontal list">
+        <div class="item"><i class="big facebook icon"></i></div>
+        <div class="item"><i class="big twitter icon"></i></div>
+        <div class="item"><i class="big instagram icon"></i></div>
+        <div class="item"><i class="big linkedin icon"></i></div>
+      </div>
+    </footer>
+
+    <!-- Import the jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <!-- Import the SemanticUI javascript file -->   
     <script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
-    <!-- import the Handlebars javascript files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.1/handlebars.min.js"></script>
-    <!-- import the webpage's javascript file -->
+
+    <!-- Import the webpage's javascript file -->
     <script src="/script.js"></script>
   </body>
 </html>

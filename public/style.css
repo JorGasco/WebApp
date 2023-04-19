@@ -1,36 +1,54 @@
 /* a minimalist set of CSS resets */
 
 /* default to border-box */
+
 html {
   box-sizing: border-box;
   font-size: 16px;
 }
 
+/* Inherit box-sizing for all elements */
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/* adjust typography defaults */
+
+
+
+/* Adjust typography defaults */
 body {
   margin: 1rem;
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
-/* images and videos max out at full width */
-img,
-video {
-  height: auto;
+h1, h2, h3 {
+  margin: 2rem 0 1rem;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+/* Set a max-width for images and videos */
+img, video {
   max-width: 100%;
 }
 
-
+/* Hide the read more section */
 #readmore {
   display: none;
 }
+
+/* Hide the welcome user section */
 #welcomeuser {
   display: none;
 }
+
+/* Style the active navigation item */
 .ui.menu .active.item {
   background: rgba(0, 0, 255, 0.08);
   color: rgba(0, 0, 255, 0.95);
