@@ -1,32 +1,27 @@
-<table class="ui fixed striped table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Category</th>
- <th>image</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each products}}
-      <tr>
-        <td>
-          {{name}}
-        </td>
-        <td>
-          {{description}}
-        </td>
-        <td>
-          ${{price}}
-        </td>
-        <td>
-          {{category}}
-        </td>
-         <td>
-          {{image}}
-        </td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+{{> menu id="dashboard"}}
+
+<section class="ui segment">
+  {{#each products}}
+    <div class="ui items">
+      <div class="item">
+        <div class="ui small image">
+          <img src="{{image}}">
+        </div>
+        <div class="content">
+          <h2 class="header">{{name}}</h2>
+          <div class="description">
+            <p>{{description}}</p>
+            <p>Price: {{price}}</p>
+            <p>Category: {{category}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+  <p>
+    <span id="rating"></span>
+  </p>
+  <button class="ui blue button" id="rateit">
+    Rate it! <i class="star icon"></i>
+  </button>
+</section> 
