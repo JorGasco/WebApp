@@ -3,24 +3,24 @@
 // import all required modules
 import logger from '../utils/logger.js';
 
-// create start object
-const start = {
+// create welcome object
+const welcome = {
 
   // index method - responsible for creating and rendering the view
   index(request, response) {
 
     // display confirmation message in log
-    logger.info('start rendering');
+    logger.info('welcome rendering');
 
     // create view data object (contains data to be sent to the view e.g. page title)
     const viewData = {
-      title: 'Welcome to the Playlist App!',
+      title: 'Welcome Company Product Collection',
     };
 
     // render the start view and pass through the data
-    response.render('start', viewData);
+    response.render('welcome', viewData);
   },
 };
 
 // export the start module
-export default start;
+export default welcome;
