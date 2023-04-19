@@ -1,20 +1,12 @@
-<nav class="ui inverted menu">
-  <a class="item" href="/">
-    <i class="large cube icon"></i>
-    Company Product Collection
-  </a>
+<nav class="ui menu">
+  <header class="ui header item"> <a href="/"> Playlist App</a></header>
   <div class="right menu">
-    <div class="item">
-      <a id="dashboard" class="ui button" href="/dashboard">
-        <i class="large dashboard icon"></i>
-        Dashboard
-      </a>
-    </div>
-    <div class="item">
-      <a id="about" class="ui button" href="/about">
-        <i class="large info circle icon"></i>
-        About
-      </a>
-    </div>
+    <a id="dashboard" class="item" href="/dashboard"> Dashboard </a>
+    <a id="about" class="item" href="/about"> about </a>
   </div>
+  
 </nav>
+
+<script>
+  document.querySelector("#{{id}}").classList.add("active");
+</script>

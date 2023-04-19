@@ -1,57 +1,59 @@
-/* a minimalist set of CSS resets */
-
-/* default to border-box */
-
 html {
   box-sizing: border-box;
   font-size: 16px;
 }
 
-/* Inherit box-sizing for all elements */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-
-
-
-/* Adjust typography defaults */
+/* adjust typography defaults */
 body {
   margin: 1rem;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  font-family: sans-serif;
   line-height: 1.5;
 }
 
-h1, h2, h3 {
-  margin: 2rem 0 1rem;
-  font-weight: bold;
-  line-height: 1.25;
-}
-
-p {
-  margin: 1rem 0;
-}
-
-/* Set a max-width for images and videos */
-img, video {
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
   max-width: 100%;
 }
 
-/* Hide the read more section */
+.welcome {
+  margin: 2rem;
+}
+
+.buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons button {
+  margin-right: 1rem;
+}
+
+.buttons button:last-child {
+  margin-right: 0;
+}
+
 #readmore {
   display: none;
 }
 
-/* Hide the welcome user section */
-#welcomeuser {
-  display: none;
+.ui.message p {
+  margin-bottom: 0;
 }
 
-/* Style the active navigation item */
-.ui.menu .active.item {
-  background: rgba(0, 0, 255, 0.08);
-  color: rgba(0, 0, 255, 0.95);
-  font-weight: normal;
-  box-shadow: none;
+.ui.grid > .column {
+  padding: 0.5rem;
+}
+
+.ui.fluid.image {
+  height: 200px;
 }
