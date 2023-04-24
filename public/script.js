@@ -18,6 +18,21 @@ function renderBasket() {
   });
 }
 
+function addProductToBasket(productId) {
+  const product = productStore.getProductById(productId);
+  basketStore.addItem(product);
+  //update the basket view or display a notification
+}
+
+// Add an event listener for the "Add to Basket" button
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".add-to-basket").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const productId = event.target.dataset.productId;
+      addProductToBasket(productId);
+    });
+  });
+});
 
 const greenbtn = document.querySelector(".green");
 
@@ -73,5 +88,4 @@ ratebtn &&
   
   
 });
-
 
