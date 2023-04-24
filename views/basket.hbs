@@ -1,30 +1,29 @@
-{{> menu id="dashboard"}}
-<script id="basket-template" type="text/x-handlebars-template">
-  <div class="container mt-4">
-    <h1>Basket</h1>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Description</th>
-          <th>Quantity</th>
-          <th>Price</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{#each items}}
-        <tr>
-          <td>{{name}}</td>
-          <td>{{description}}</td>
-          <td>{{quantity}}</td>
-          <td>{{price}}</td>
-          <td>
-            <button class="btn btn-danger btn-sm remove-from-basket" data-product-id="{{id}}">Remove</button>
-          </td>
-        </tr>
-        {{/each}}
-      </tbody>
-    </table>
-  </div>
-</script>
+{{> menu id="basket"}}
+
+<section class="ui segment">
+  <h2 class="ui header">Basket</h2>
+  {{#if items}}
+    <div class="ui items">
+      {{#each items}}
+        <div class="item">
+          <div class="ui small image">
+            <img src="/images/{{image}}">
+          </div>
+          <div class="content">
+            <h3 class="ui header">{{name}}</h3>
+            <div class="description">{{description}}</div>
+            <div class="extra">{{category}}</div>
+            <div class="extra">{{price}}</div>
+            <div class="extra">{{#each features}}<li>{{this}}</li>{{/each}}</div>
+            <button class="ui red button remove-from-basket" data-product-id="{{id}}">
+              Remove from basket <i class="trash icon"></i>
+            </button>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    <p>Your basket is empty.</p>
+  {{/if}}
+</section>
+

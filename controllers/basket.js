@@ -1,23 +1,28 @@
+'use strict';
+
+// Import all required modules
+import logger from '../utils/logger.js';
+import basketStore from '../models/basket-store.js';
+
+// Create basket object
 const basket = {
-  items: [],
 
-  addProduct(product) {
-    const existingProduct = this.items.find((item) => item.id === product.id);
-    if (existingProduct) {
-      existingProduct.quantity++;
-    } else {
-      this.items.push({ ...product, quantity: 1 });
-    }
-  },
+  // index method - responsible for creating and rendering the view
+  index(request, response) {
 
-  removeProduct(productId) {
-    const productIndex = this.items.findIndex((item) => item.id === productId);
-    if (productIndex > -1) {
-      if (this.items[productIndex].quantity > 1) {
-        this.items[productIndex].quantity--;
-      } else {
-        this.items.splice(productIndex, 1);
-      }
-    }
+    // Display confirmation message in log
+    logger.info('basket rendering');
+
+    // Create view data object (contains data to be sent to the view e.g. page title)
+    const viewData = {
+      title: 'Basket',
+      items: basketStore.getAllItems(),
+    };
+
+    // Render the basket view and pass through the data
+    response.render('basket', viewData);
   },
 };
+
+// Export the basket module
+export default basket;
