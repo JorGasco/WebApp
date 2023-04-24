@@ -1,0 +1,30 @@
+{{> menu id="dashboard"}}
+<script id="basket-template" type="text/x-handlebars-template">
+  <div class="container mt-4">
+    <h1>Basket</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Description</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each items}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{description}}</td>
+          <td>{{quantity}}</td>
+          <td>{{price}}</td>
+          <td>
+            <button class="btn btn-danger btn-sm remove-from-basket" data-product-id="{{id}}">Remove</button>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</script>
