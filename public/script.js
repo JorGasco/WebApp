@@ -5,34 +5,23 @@ $.getScript('basket.js', function () {
 
 // Function to render the basket view
 function renderBasket() {
-  const basketTemplateSource = $('#basket-template').html();
-  const basketTemplate = Handlebars.compile(basketTemplateSource);
-  const basketHtml = basketTemplate(basket);
-  $('#views').html(basketHtml);
-
-  // Attach click event handler for removing items from the basket
-  $('.remove-from-basket').on('click', function () {
-    const productId = $(this).data('product-id');
-    basket.removeProduct(productId);
-    renderBasket(); // Update the view
-  });
+  // ...
 }
 
 function addProductToBasket(productId) {
-  const product = productStore.getProductById(productId);
-  basketStore.addItem(product);
-  //update the basket view or display a notification
+  // ...
 }
 
-// Add an event listener for the "Add to Basket" button
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".add-to-basket").forEach((button) => {
-    button.addEventListener("click", (event) => {
-      const productId = event.target.dataset.productId;
-      addProductToBasket(productId);
-    });
+$(document).ready(function () {
+  // Add an event listener for the "Add to Basket" button
+  $(".add-to-basket").on("click", function () {
+    const productId = $(this).data('product-id');
+    addProductToBasket(productId);
   });
+
+  // The rest of your event listeners
 });
+
 
 const greenbtn = document.querySelector(".green");
 
