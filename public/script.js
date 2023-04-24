@@ -1,3 +1,23 @@
+// Import the basket object
+$.getScript('basket.js', function () {
+  // basket object is now accessible
+});
+
+// Function to render the basket view
+function renderBasket() {
+  const basketTemplateSource = $('#basket-template').html();
+  const basketTemplate = Handlebars.compile(basketTemplateSource);
+  const basketHtml = basketTemplate(basket);
+  $('#views').html(basketHtml);
+
+  // Attach click event handler for removing items from the basket
+  $('.remove-from-basket').on('click', function () {
+    const productId = $(this).data('product-id');
+    basket.removeProduct(productId);
+    renderBasket(); // Update the view
+  });
+}
+
 
 const greenbtn = document.querySelector(".green");
 
@@ -50,6 +70,8 @@ ratebtn &&
         document.querySelector("#rating").innerHTML +="<i class='yellow star icon'></i>";
     }
   }
+  
+  
 });
 
 
