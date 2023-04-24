@@ -1,7 +1,5 @@
-// Import the basket object
-$.getScript('basket.js', function () {
-  // basket object is now accessible
-});
+import basketStore from './models/basket-store.js';
+import productStore from './models/product-store.js';
 
 // Function to render the basket view
 function renderBasket() {
@@ -9,7 +7,9 @@ function renderBasket() {
 }
 
 function addProductToBasket(productId) {
-  // ...
+  const product = productStore.getProductById(productId);
+  basketStore.addItem(product);
+  // update the basket view or display a notification
 }
 
 $(document).ready(function () {
@@ -21,7 +21,6 @@ $(document).ready(function () {
 
   // The rest of your event listeners
 });
-
 
 const greenbtn = document.querySelector(".green");
 
@@ -55,26 +54,22 @@ redbtn &&
 
 welcomeUserDiv &&
   welcomeUserDiv.addEventListener("click", (evt) => {
-   // evt.currentTarget.style.display = "none";
     welcomeUserDiv.style.display = "none";
   });
 
-const ratebtn  = document.querySelector("#rateit");
+const ratebtn = document.querySelector("#rateit");
 
 ratebtn &&
   ratebtn.addEventListener("click", () => {
-   let userRating = parseInt(prompt("Rate this collection (from 1 to 5 stars)"));
-  if (userRating>5 || userRating<1 || isNaN(userRating)){
-    alert("Try again with a number between 1 and 5!");
-  }
-  else{
-
-    document.querySelector("#rating").innerHTML = "You gave a rating of: ";
-    for (let i=0; i < userRating; i++){
-        document.querySelector("#rating").innerHTML +="<i class='yellow star icon'></i>";
+    let userRating = parseInt(prompt("Rate this collection (from 1 to 5 stars)"));
+    if (userRating > 5 || userRating < 1 || isNaN(userRating)) {
+      alert("Try again with a number between 1 and 5!");
+    } else {
+      document.querySelector("#rating").innerHTML = "You gave a rating of: ";
+      for (let i = 0; i < userRating; i++) {
+        document.querySelector("#rating").innerHTML += "<i class='yellow star icon'></i>";
+      }
     }
-  }
-  
-  
-});
+  });
+
 
