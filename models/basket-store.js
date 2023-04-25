@@ -1,9 +1,10 @@
 'use strict';
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-const developers = require("./basket-store.json");
+
+// Import all required modules
+import logger from '../utils/logger.js';
 
 const basketStore = {
+
   items: [],
 
   getAllItems() {
@@ -11,16 +12,8 @@ const basketStore = {
   },
 
   addItem(item) {
-    const itemIndex = this.items.findIndex(existingItem => existingItem.id === item.id);
-
-    if (itemIndex > -1) {
-      this.items[itemIndex].quantity += 1;
-      logger.info(`Updating quantity of item ${item.id}`);
-    } else {
-      item.quantity = 1;
-      this.items.push(item);
-      logger.info(`Adding item ${item.id}`);
-    }
+    this.items.push(item);
+    logger.info(`Adding item ${item.id}`);
   },
 
   removeItem(itemId) {
