@@ -23,6 +23,22 @@
       "email": "dieginpabon1808@gmail.com",
       "phone": "08565465",
       "products": []
+    },
+    {
+      "id": "7b0542e8-836a-4a00-b58d-f333a7de48f0",
+      "name": "Áine",
+      "location": "waterford",
+      "email": "20098757@mail.wit.ie",
+      "phone": "08565465",
+      "products": []
+    },
+    {
+      "id": "031e27fa-27be-4ddb-b158-ca15a8101e27",
+      "name": "Áine",
+      "location": "waterford",
+      "email": "dieginpabon1808@gmail.com",
+      "phone": "08565465",
+      "products": []
     }
   ]
 }

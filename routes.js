@@ -22,7 +22,7 @@ router.get('/dashboard/deleteBasket/:id', dashboard.deleteBasket);
 
 
 router.post('/basket/:id/addproduct', basket.addProduct);
-router.post('/dashboard/addsupplier', dashboard.addBasket);
+router.post('/dashboard/addbasket', dashboard.addBasket);
 
 router.post('/basket/:id/updateproduct/:productid', basket.updateProduct);
 
