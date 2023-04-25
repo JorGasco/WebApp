@@ -1,3 +1,21 @@
 {
-  "basketCollection": []
+  "basketCollection": [
+    {
+      "id": "5ee15397-3c98-4003-b3c5-cc1dd1fbff19",
+      "name": "Áine",
+      "location": "waterford",
+      "email": "20098757@mail.wit.ie",
+      "phone": "08565465",
+      "products": [
+        {
+          "id": "cc3dc3fd-275b-4304-8d6e-22789d859df8",
+          "name": "Áine",
+          "description": "beatiful girl",
+          "price": "infinite",
+          "category": "girlfriend",
+          "quantity": "only 1"
+        }
+      ]
+    }
+  ]
 }
