@@ -2,6 +2,7 @@ import basketStore from './models/basket-store.js';
 import productStore from './models/product-store.js';
 // Import Handlebars
 import Handlebars from 'handlebars';
+
 function renderBasket() {
   const basketTemplateSource = $('#basket-template').html();
   const basketTemplate = Handlebars.compile(basketTemplateSource);
@@ -11,15 +12,18 @@ function renderBasket() {
   $('.remove-from-basket').on('click', handleRemoveFromBasket);
 }
 
-function addProductToBasket(productId) {
-  const product = productStore.getProductById(productId);
-  basketStore.addItem(product);
-  renderBasket();
-}
-
-function handleAddToBasketClick() {
-  const productId = $(this).data('product-id');
-  addProductToBasket(productId);
+function addToBasket(productId) {
+  $.ajax({
+    url: '/basket/add',
+    type: 'POST',
+    data: { productId },
+    success: function (response) {
+      // Update the basket view or display a notification
+    },
+    error: function (xhr, status, error) {
+      console.error('Error adding product to basket:', error);
+    }
+  });
 }
 
 function handleRemoveFromBasket() {
@@ -27,83 +31,3 @@ function handleRemoveFromBasket() {
   basketStore.removeItem(productId);
   renderBasket();
 }
-
-function handleRedButtonClick() {
-  const username = prompt("What's your name?");
-  const welcomeUserDiv = document.querySelector("#welcomeuser");
-  welcomeUserDiv.style.display = "block";
-  welcomeUserDiv.innerHTML = `<p> Hello, ${username},
-    looking forward to hearing your playlists! Click this message to close it.</p>`;
-  welcomeUserDiv.style.cursor = "pointer";
-}
-
-function handleRateButtonClick() {
-  let userRating = parseInt(prompt("Rate this collection (from 1 to 5 stars)"));
-  if (userRating > 5 || userRating < 1 || isNaN(userRating)) {
-    alert("Try again with a number between 1 and 5!");
-  } else {
-    const ratingElement = document.querySelector("#rating");
-    ratingElement.innerHTML = "You gave a rating of: ";
-    for (let i = 0; i < userRating; i++) {
-      ratingElement.innerHTML += "<i class='yellow star icon'></i>";
-    }
-  }
-}
-
-$(document).ready(function () {
-  $('.add-to-basket').on('click', handleAddToBasketClick);
-  $('.red').on('click', handleRedButtonClick);
-  $('#rateit').on('click', handleRateButtonClick);
-});
-
-const greenbtn = document.querySelector(".green");
-
-greenbtn &&
-  greenbtn.addEventListener("click", () => alert("Thanks! You're okay too"));
-
-const bluebtn = document.querySelector(".blue");
-
-bluebtn &&
-  bluebtn.addEventListener("click", () => {
-    let readMoreDiv = document.querySelector("#readmore");
-    if (readMoreDiv.style.display === "block") {
-      readMoreDiv.style.display = "none";
-    } else {
-      readMoreDiv.style.display = "block";
-    }
-  });
-
-const redbtn = document.querySelector(".red");
-
-const welcomeUserDiv = document.querySelector("#welcomeuser");
-
-redbtn &&
-  redbtn.addEventListener("click", () => {
-    let username = prompt("What's your name?");
-    welcomeUserDiv.style.display = "block";
-    document.querySelector("#welcomeuser").innerHTML = `<p> Hello, ${username},
-    looking forward to hearing your playlists! Click this message to close it.</p>`;
-    welcomeUserDiv.style.cursor = "pointer";
-  });
-
-welcomeUserDiv &&
-  welcomeUserDiv.addEventListener("click", (evt) => {
-    welcomeUserDiv.style.display = "none";
-  });
-
-const ratebtn = document.querySelector("#rateit");
-
-ratebtn &&
-  ratebtn.addEventListener("click", () => {
-    let userRating = parseInt(prompt("Rate this collection (from 1 to 5 stars)"));
-    if (userRating > 5 || userRating < 1 || isNaN(userRating)) {
-      alert("Try again with a number between 1 and 5!");
-    } else {
-      document.querySelector("#rating").innerHTML = "You gave a rating of: ";
-      for (let i = 0; i < userRating; i++) {
-        document.querySelector("#rating").innerHTML += "<i class='yellow star icon'></i>";
-      }
-    }
-  });
-
-

@@ -15,7 +15,10 @@
             <div class="extra">{{category}}</div>
             <div class="extra">{{price}}</div>
             <div class="extra">{{#each features}}<li>{{this}}</li>{{/each}}</div>
-            <button class="ui button add-to-basket" data-product-id="{{id}}">Add to Basket</button>
+               
+<button class="ui button add-to-basket" data-product-id="{{id}}" onclick="addToBasket('{{id}}')">Add to Basket</button>
+
+
           </div>
         </div>
       </div>
