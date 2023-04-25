@@ -1,6 +1,7 @@
 'use strict';
-
-import logger from '../utils/logger.js';
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const developers = require("./basket-store.json");
 
 const basketStore = {
   items: [],

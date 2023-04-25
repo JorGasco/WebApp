@@ -12,7 +12,5 @@ router.get('/', welcome.index);
 router.get('/dashboard', dashboard.index);
 router.get('/about', about.index);
 router.get('/basket', basket.index);
-router.post('/basket/add', basket.addToBasket);
-
 // export router module
 export default router;
