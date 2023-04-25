@@ -11,18 +11,20 @@ import basket from './controllers/basket.js';
 router.get('/', welcome.index);
 router.get('/dashboard', dashboard.index);
 router.get('/about', about.index);
-router.get('/basket', basket.index);
+
 
 router.get('/basket/:id', basket.index);
 
 
-router.get('/basket/:id/deletebasket/:basketid', basket.deletebasket);
-router.get('/dashboard/deleteplaylist/:id', dashboard.deletePlaylist);
+router.get('/basket/:id/deleteProduct/:Productid', basket.deleteProduct);
+router.get('/dashboard/deleteBasket/:id', dashboard.deleteBasket);
 
-router.post('/playlist/:id/addsong', playlist.addSong);
-router.post('/dashboard/addplaylist', dashboard.addPlaylist);
 
-router.post('/playlist/:id/updatesong/:songid', playlist.updateSong);
+
+router.post('/basket/:id/addProduct', basket.addProduct);
+router.post('/dashboard/addBasket', dashboard.addBasket);
+
+router.post('/basket/:id/updateProduct/:Productid', basket.updateSong);
 
 // export router module
 export default router;

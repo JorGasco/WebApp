@@ -40,7 +40,10 @@ addBasket(request, response) {
 const newBasket = {
 id: uuidv4(),
 name: request.body.name,
-items: [],
+location: request.body.location,
+email: request.body.email,
+phone: request.body.phone,
+products: [],
 };
 basketStore.addBasket(newBasket);
 response.redirect('/dashboard');

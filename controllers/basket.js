@@ -38,23 +38,23 @@ price: request.body.price,
 category: request.body.category,
 quantity: request.body.quantity
 };
-basketStore.addItem(basketId, newItem);
+basketStore.addProduct(basketId, newProduct);
 response.redirect('/basket/' + basketId);
 },
 
-updateItem(request, response) {
+updateProduct(request, response) {
 const basketId = request.params.id;
-const itemId = request.params.itemid;
-logger.debug("updating item " + itemId);
-const updatedItem = {
-id: itemId,
+const ProductId = request.params.Productid;
+logger.debug("updating Product " + ProductId);
+const updatedProduct = {
+id: ProductId,
 name: request.body.name,
 description: request.body.description,
 price: request.body.price,
 category: request.body.category,
 quantity: request.body.quantity
 };
-basketStore.editItem(basketId, itemId, updatedItem);
+basketStore.editProduct(basketId, ProductId, updatedProduct);
 response.redirect('/basket/' + basketId);
 }
 };
