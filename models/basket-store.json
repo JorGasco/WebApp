@@ -1,12 +1,12 @@
 {
-  "companyProductsCollection": [
+  "basketCollection": [
     
         {
          "id": "6138ec1a-b601-4f80-b96f-029059165156",
-      "name": "Supplier A",
-     "location": "New York",
-       "email": "john.doe@suppliera.com",
-       "phone": "555-555-5555",
+         "name": "asdaf",
+         "location": "asdasda",
+       "email": "asdasda",
+       "phone": "156165",
 "products":[]
         }
            
