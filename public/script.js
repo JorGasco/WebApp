@@ -2,7 +2,6 @@ import basketStore from './models/basket-store.js';
 import productStore from './models/product-store.js';
 // Import Handlebars
 import Handlebars from 'handlebars';
-
 function renderBasket() {
   const basketTemplateSource = $('#basket-template').html();
   const basketTemplate = Handlebars.compile(basketTemplateSource);

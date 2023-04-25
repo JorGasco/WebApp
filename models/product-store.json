@@ -6,7 +6,7 @@
       "description": "A collection of fitness products designed for people who want to stay active and healthy",
       "products": [
         {
-          "idd": "02",
+          "id": "02",
           "name": "Smart Fitness Tracker",
           "description": "A fitness tracker that monitors your activity, sleep, heart rate, and other health metrics",
           "price": 99.99,
@@ -14,7 +14,7 @@
           "image": "smart-fitness-tracker.jpg"
         },
         {
-          "idd": "03",
+          "id": "03",
           "name": "Resistance Bands Set",
           "description": "A set of resistance bands that you can use for strength training, stretching, and mobility exercises",
           "price": 39.99,
@@ -29,7 +29,7 @@
       "description": "A collection of home decor products designed to make your living space more comfortable and stylish",
       "products": [
         {
-          "idd": "04",
+          "id": "04",
           "name": "Modern Area Rug",
           "description": "A high-quality area rug that adds a pop of color and texture to your living room or bedroom",
           "price": 149.99,
@@ -37,7 +37,7 @@
           "image": "modern-area-rug.jpg"
         },
         {
-          "idd": "05",
+          "id": "05",
           "name": "Wall Art Set",
           "description": "A set of minimalist wall art prints that add a touch of sophistication to any room",
           "price": 69.99,
@@ -52,7 +52,7 @@
       "description": "A collection of tech products designed to make your life easier and more enjoyable",
       "products": [
         {
-          "idd": "06",
+          "id": "06",
           "name": "Wireless Headphones",
           "description": "High-quality wireless headphones that provide clear and immersive sound",
           "price": 129.99,
@@ -60,7 +60,7 @@
           "image": "wireless-headphones.jpg"
         },
         {
-          "idd": "07",
+          "id": "07",
           "name": "Smart Home Speaker",
           "description": "A smart speaker that can play music, answer questions, and control your smart home devices",
           "price": 199.99,
