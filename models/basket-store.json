@@ -2,11 +2,12 @@
   "companyProductsCollection": [
     
         {
-          "id": "0001",
-          "name": "dsfsdfsdfsdf",
-          "description": " gsdgsdgsdgsd",
-          "price": "99.99",
-          "image": "smart-fitness-tracker.jpg"
-           }
+         "id": "1",
+      "name": "Supplier A",
+     "location": "New York",
+       "email": "john.doe@suppliera.com",
+       "phone": "555-555-5555"
+        }
+           
   ]
 }
