@@ -1,0 +1,12 @@
+{
+  "companyProductsCollection": [
+    
+        {
+          "id": "0001",
+          "name": "dsfsdfsdfsdf",
+          "description": " gsdgsdgsdgsd",
+          "price": "99.99",
+          "image": "smart-fitness-tracker.jpg"
+           }
+  ]
+}
