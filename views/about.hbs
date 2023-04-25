@@ -1,15 +1,88 @@
 {{> menu id="about"}}
 
-<section class="ui center aligned middle aligned segment">
-  <h2 class="ui header">
-    Company Owner
-  </h2>
+<section class="ui center aligned middle aligned segment custom-segment">
+  <h2 class="ui header">Company Owner</h2>
 
   <div class="ui centered cards">
-
     {{#each developers}}
       {{> card}}
-  {{/each}}
-
+    {{/each}}
   </div>
 </section>
+
+<style>
+  .custom-segment {
+    background-color: #F7F7F7;
+    background-image: url('https://www.example.com/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    font-size: 1.2rem;
+    padding: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .custom-segment h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .ui.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ui.card {
+    margin: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .ui.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .ui.card .image {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .ui.card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ui.card .content {
+    text-align: center;
+  }
+
+  .ui.card .header {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .ui.card .description {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .ui.card .meta {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .ui.card .extra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .ui.card .extra i {
+    margin-right: 0.5rem;
+  }
+</style>

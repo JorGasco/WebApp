@@ -1,12 +1,5 @@
 {{> menu}}
-<section class="welcome ui two column grid segment">
-  <div class="ui column">
-    <h2>Welcome to the Company Production Collection!</h2>
-    <p>
-      This app allows users to create and maintain a collection of products produced by our company.
-    </p>
-  </div>
-  
+<section class="welcome ui one column grid segment">
   <div class="ui column">
     <div class="ui two cards">
       <div class="card">
@@ -21,10 +14,23 @@
       </div>
     </div>
   </div>
+
+  <div class="ui column">
+    <div class="content">
+      <h2 class="ui header">Welcome to the Company Production Collection!</h2>
+      <p>
+        This app allows users to create and maintain a collection of products produced by our company.
+      </p>
+    </div>
+  </div>
 </section>
 
 <style>
   .welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
     background-color: #F7F7F7;
     background-image: url('https://www.example.com/background-image.jpg');
     background-size: cover;
@@ -36,7 +42,7 @@
     text-align: center;
   }
 
-  .welcome h2 {
+  .welcome h2.ui.header {
     font-size: 3rem;
     margin-bottom: 1rem;
   }
