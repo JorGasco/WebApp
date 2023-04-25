@@ -5,36 +5,52 @@
     <link rel="icon" href="https://glitch.com/favicon.ico" />
     <title>{{title}}</title>
     <!-- import the SemanticUI stylesheet -->
-    <link rel="stylesheet" 
-          href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />  
+    <link rel="stylesheet" href="/style.css" />
     <!-- import the Google Fonts stylesheet -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap" />
     <style>
       .custom-container {
         max-width: 1000px;
         margin: 0 auto;
         padding: 2rem 1rem;
-        background-color: #F5F5F5;
+        background-color: #ffffff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         border-radius: 10px;
       }
       .ui.inverted.menu {
-        background-color: #F44336;
+        background-color: #1b4d89;
         border-bottom: none;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         border-radius: 0;
         padding: 1rem 2rem;
       }
       .ui.inverted.menu a.item {
-        color: #FFFFFF;
+        color: #ffffff;
         font-size: 1.2rem;
         padding: 1rem;
         text-transform: uppercase;
       }
       .ui.inverted.menu i.large.icon {
         margin-right: 0.5rem;
+      }
+      .ui.button.primary {
+        background-color: #6db784;
+        color: #ffffff;
+      }
+      .ui.button.secondary {
+        background-color: #f9e45b;
+        color: #000000;
+      }
+      .ui.button.inverted {
+        background-color: transparent;
+        color: #1b4d89;
+        border: 2px solid #1b4d89;
+      }
+      .ui.button.inverted:hover {
+        background-color: #1b4d89;
+        color: #ffffff;
       }
     </style>
   </head>
@@ -46,13 +62,13 @@
       </a>
       <div class="right menu">
         <div class="item">
-          <a id="dashboard" class="ui button" href="/dashboard">
+          <a id="dashboard" class="ui button primary" href="/dashboard">
             <i class="large dashboard icon"></i>
             Dashboard
           </a>
         </div>
         <div class="item">
-          <a id="about" class="ui button" href="/about">
+          <a id="about" class="ui button secondary" href="/about">
             <i class="large info circle icon"></i>
             About
           </a>
@@ -71,8 +87,8 @@
     <script
       src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
     <!-- import the Handlebars javascript files -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.1/handlebars.min.js"></script>
+    <script> 
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4
     <!-- import the webpage's javascript file -->
     <script src="/script.js"></script>
   </body>
