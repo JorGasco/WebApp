@@ -6,7 +6,8 @@
       "name": "Supplier A",
      "location": "New York",
        "email": "john.doe@suppliera.com",
-       "phone": "555-555-5555"
+       "phone": "555-555-5555",
+"products":[]
         }
            
   ]

@@ -11,27 +11,31 @@ logger.debug('Basket id = ' + basketId);
 const viewData = {
 title: 'Basket',
 basket: basketStore.getBasket(basketId),
-};s
+};
+  
+  
 logger.info('about to render', viewData.basket);
 response.render('basket', viewData);
 },
-deleteItem(request, response) {
+  
+  
+deleteProduct(request, response) {
 const basketId = request.params.id;
-const itemId = request.params.itemid;
-logger.debug(Deleting Item ${itemId} from Basket ${basketId});
-basketStore.removeItem(basketId, itemId);
+const ProductId = request.params.Productid;
+logger.debug(Deleting Product ${ProductId} from Basket ${basketId});
+basketStore.removeProduct(basketId, ProductId);
 response.redirect('/basket/' + basketId);
 },
-addItem(request, response) {
+  
+addProduct(request, response) {
 const basketId = request.params.id;
 const basket = basketStore.getBasket(basketId);
-const newItem = {
+const newProduct = {
 id: uuidv4(),
 name: request.body.name,
 description: request.body.description,
 price: request.body.price,
 category: request.body.category,
-image: request.body.image,
 quantity: request.body.quantity
 };
 basketStore.addItem(basketId, newItem);
@@ -48,7 +52,6 @@ name: request.body.name,
 description: request.body.description,
 price: request.body.price,
 category: request.body.category,
-image: request.body.image,
 quantity: request.body.quantity
 };
 basketStore.editItem(basketId, itemId, updatedItem);
