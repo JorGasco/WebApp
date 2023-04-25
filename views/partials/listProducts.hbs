@@ -2,42 +2,38 @@
   <thead>
     <tr>
       <th class="four wide">name</th>
-      <th class="four wide"></th>
-      <th class="three wide">Genre</th>
-      <th class="three wide">Duration</th>
+      <th class="four wide">description</th>
+      <th class="three wide">price</th>
+      <th class="three wide">category</th>
       <th class="one wide"> </th>
       <th class="one wide"> </th>
     </tr>
   </thead>
 <tbody>
-    {{#each playlist.songs}}
-    <form class = "ui stacked segment form" action="/playlist/{{../playlist.id}}/updatesong/{{id}}" method="POST">
+    {{#each basket.products}}
+    <form class = "ui stacked segment form" action="/basket/{{../basket.id}}/updatebasket/{{id}}" method="POST">
     <tr class="fields">
       <td class="field">
         <span class="ui input">
-         <input type="text" name="title" autofocus required title = "Please include a valid Title" placeholder="Title" value = "{{title}}">
+         <input type="text" name="description" autofocus required title = "Please include a valid description" placeholder="description" value = "{{description}}">
         </span>
       </td>
       <td class="field">
         <span class="ui input">
-          <input type="text" name="artist" required title = "Please include a valid Artist" placeholder="Artist" value = "{{artist}}">
+          <input type="text" name="price" required title = "Please include a valid price" placeholder="price" value = "{{price}}">
         </span>
       </td>
       <td class="field">
         <span class="ui input">
-          <input type="text" name="genre" autofocus required title = "Please include a valid Genre" placeholder="Genre" value = "{{genre}}">         
+          <input type="text" name="category" autofocus required title = "Please include a valid category" placeholder="category" value = "{{category}}">         
         </span>
       </td>
-      <td class="field">
-        <span class="ui input">
-          <input type="text" name="duration" required title = "Please enter a valid duration" placeholder="Duration" value = "{{duration}}">
-        </span>
-      </td>
+    
       <td class="center aligned">
         <button class="ui submit icon button"><i class="ui pencil alternate icon"></i></button>
       </td>
       <td class="center aligned">
-        <a href="/playlist/{{../playlist.id}}/deletesong/{{id}}" class="ui icon button delsong">
+        <a href="/basket/{{../basket.id}}/deletebasket/{{id}}" class="ui icon button delbasket">
           <i class="ui trash icon"></i>
         </a>
       </td>
@@ -47,10 +43,3 @@
   </tbody>
 </table>
 
-<p>
-  <span id="rating"> </span>
-</p>
-
-<button class="ui blue button" id="rateit">
-  Rate it! <i class="star icon"></i>
-</button>
