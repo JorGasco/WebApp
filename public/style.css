@@ -1,69 +1,91 @@
 html {
-  box-sizing: border-box;
-  font-size: 16px;
+box-sizing: border-box;
+font-size: 16px;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+box-sizing: inherit;
 }
 
 /* adjust typography defaults */
 body {
-  margin: 1rem;
-  font-family: sans-serif;
-  line-height: 1.5;
+margin: 1rem;
+font-family: 'Roboto', sans-serif;
+line-height: 1.5;
 }
 
 /* images and videos max out at full width */
 img,
 video {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-   
+display: block;
+margin: 0 auto;
+max-width: 100%;
+height: auto;
+object-fit: contain;
+border-radius: 5px;
+transition: all 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 768px) {
-  img,
-  video {
-    max-width: 100%;
-  }
+img,
+video {
+max-width: 100%;
 }
+}
+
 .welcome {
-  margin: 2rem;
+margin: 2rem;
+text-align: center;
 }
 
 .buttons {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+margin-top: 1rem;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .buttons button {
-  margin-right: 1rem;
+margin-right: 1rem;
+background-color: #FFB800;
+color: #ffffff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+}
+
+.buttons button:hover {
+background-color: #EAA200;
 }
 
 .buttons button:last-child {
-  margin-right: 0;
+margin-right: 0;
 }
 
 #readmore {
-  display: none;
+display: none;
 }
 
 .ui.message p {
-  margin-bottom: 0;
+margin-bottom: 0;
 }
 
 .ui.grid > .column {
-  padding: 0.5rem;
+padding: 0.5rem;
 }
 
 .ui.fluid.image {
-  height: 200px;
+height: 200px;
+border-radius: 5px;
+transition: all 0.3s ease-in-out;
+}
+
+.ui.fluid.image:hover {
+transform: scale(1.05);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }

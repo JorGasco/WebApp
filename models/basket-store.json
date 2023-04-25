@@ -1,29 +1,3 @@
 {
-  "basketCollection": [
-    {
-      "id": "d894eb3a-94f2-46c4-8f7c-2eb9235ab74d",
-      "name": "Áine",
-      "location": "waterford",
-      "email": "dieginpabon1808@gmail.com",
-      "phone": "08565465",
-      "products": [
-        {
-          "id": "6330148d-f972-40b5-9826-344a17762604",
-          "name": "Áine",
-          "description": "beatiful girl",
-          "price": "infinite",
-          "category": "girlfriend",
-          "quantity": "only 1"
-        },
-        {
-          "id": "bea5e959-52db-407a-9f86-2634e3a8fb73",
-          "name": "Áine",
-          "description": "beatiful girl",
-          "price": "infinite",
-          "category": "girlfriend",
-          "quantity": "only 1"
-        }
-      ]
-    }
-  ]
+  "basketCollection": []
 }
