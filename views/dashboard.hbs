@@ -1,27 +1,6 @@
 {{> menu id="dashboard"}}
 
 <section class="ui segment">
-  {{#each products}}
-    <h2 class="ui header">{{name}}</h2>
-    {{#each products}}
-      <div class="ui items">
-        <div class="item">
-          <div class="ui small image">
-            <img src="/images/{{image}}">
-          </div>
-          <div class="content">
-            <h3 class="ui header">{{name}}</h3>
-            <div class="description">{{description}}</div>
-            <div class="extra">{{category}}</div>
-            <div class="extra">{{price}}</div>
-            <div class="extra">{{#each features}}<li>{{this}}</li>{{/each}}</div>
-               
-<button class="ui button add-to-basket" data-product-id="{{id}}" onclick="addToBasket('{{id}}')">Add to Basket</button>
-
-
-          </div>
-        </div>
-      </div>
-    {{/each}}
-  {{/each}}
+  {{> listSuppliers}}
+  {{> addSupplier}}
 </section>

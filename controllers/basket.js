@@ -11,7 +11,7 @@ logger.debug('Basket id = ' + basketId);
 const viewData = {
 title: 'Basket',
 basket: basketStore.getBasket(basketId),
-};
+};s
 logger.info('about to render', viewData.basket);
 response.render('basket', viewData);
 },

@@ -1,6 +1,6 @@
 import basketStore from './models/basket-store.js';
 import productStore from './models/product-store.js';
 // Import Handlebars
-$(".delsong").click(() => confirm('Really delete this song?'))
+$(".delprod").click(() => confirm('Really delete this product?'))
 
-$(".delplaylist").click(() => confirm('Really delete this playlist?'))
+$(".delsupl").click(() => confirm('Really delete this Supplier?'))
