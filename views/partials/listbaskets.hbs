@@ -1,16 +1,71 @@
 {{#each baskets}}
-  <section class="ui stacked segment">
+  <section class="ui raised segment custom-segment">
     <h2 class="ui header">
       {{name}}
     </h2>
     <p> location: {{location}} </p>
     <p> email: {{email}} </p>
     <p> phone: {{phone}} </p>
-    <a href="/basket/{{id}}" class="ui icon button">
-      <i class="icon folder open"></i>
-    </a>
-    <a href="/dashboard/deletebasket/{{id}}" class="ui icon button delsupl">
-      <i class="icon trash"></i>
-    </a>
+    <div class="ui two icon buttons">
+      <a href="/basket/{{id}}" class="ui icon button">
+        <i class="folder open icon"></i>
+      </a>
+      <a href="/dashboard/deletebasket/{{id}}" class="ui icon button delsupl">
+        <i class="trash icon"></i>
+      </a>
+    </div>
   </section>
 {{/each}}
+
+<style>
+  .custom-segment {
+    background-color: #ffffff;
+    color: #1b4d89;
+    font-size: 1.2rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .custom-segment h2.ui.header {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #1b4d89;
+  }
+
+  .custom-segment p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  .ui.raised.segment {
+    border: 2px solid #1b4d89;
+    box-shadow: none;
+  }
+
+  .ui.raised.segment:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .ui.two.icon.buttons .button {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: #6db784;
+    color: #ffffff;
+  }
+
+  .ui.two.icon.buttons .button:hover {
+    background-color: #f9e45b;
+    color: #1b4d89;
+  }
+
+  .ui.two.icon.buttons .delsupl.button {
+    background-color: #f9e45b;
+    color: #1b4d89;
+  }
+
+  .ui.two.icon.buttons .delsupl.button:hover {
+    background-color: #6db784;
+    color: #ffffff;
+  }
+</style>

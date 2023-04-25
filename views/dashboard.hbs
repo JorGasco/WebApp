@@ -1,14 +1,14 @@
 {{> menu id="dashboard"}}
 
-<section class="ui segment custom-segment">
+<section class="ui segment custom-segment" style="background-color: #1b4d89; color: #000000;">
   {{> listbaskets}}
   {{> addbasket}}
 </section>
 
 <style>
   .custom-segment {
-    background-color: #EFEFEF;
-    color: #333;
+    background-color: #f9e45b;
+    color: #1b4d89;
     font-size: 1.2rem;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -38,6 +38,8 @@
   .custom-segment .ui.form .button {
     width: 100%;
     margin-top: 1rem;
+    background-color: #6db784;
+    color: #ffffff;
   }
 
   .custom-segment .ui.list .item {
@@ -46,10 +48,12 @@
     align-items: center;
     padding: 1rem;
     margin-bottom: 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+    background-color: #000000;
+    color: #1b4d89;
   }
 
   .custom-segment .ui.list .item:hover {

@@ -1,60 +1,126 @@
-<table class="ui fixed striped table">
+{{> menu}}
+
+<table class="ui fixed striped table custom-table">
   <thead>
     <tr>
-      <th class="four wide">name</th>
-      <th class="four wide">description</th>
-      <th class="three wide">price</th>
-      <th class="three wide">category</th>
-      <th class="three wide">quantity</th>
-      
-      <th class="one wide"> </th>
-      <th class="one wide"> </th>
+      <th class="four wide">Name</th>
+      <th class="four wide">Description</th>
+      <th class="two wide">Price</th>
+      <th class="two wide">Category</th>
+      <th class="two wide">Quantity</th>
+      <th class="two wide"></th>
+      <th class="two wide"></th>
     </tr>
   </thead>
-<tbody>
+  <tbody>
     {{#each basket.products}}
-    <form class = "ui stacked segment form" action="/basket/{{../basket.id}}/updateproduct/{{id}}" method="POST">
-    <tr class="fields">
-      
-       <td class="field">
-        <span class="ui input">
-          <input type="text" name="name" required title = "Please include a valid Name" placeholder="price" value = "{{name}}">
-        </span>
-      </td>
-      
-      <td class="field">
-        <span class="ui input">
-         <input type="text" name="description" autofocus required title = "Please include a valid description" placeholder="description" value = "{{description}}">
-        </span>
-      </td>
-      <td class="field">
-        <span class="ui input">
-          <input type="text" name="price" required title = "Please include a valid price" placeholder="price" value = "{{price}}">
-        </span>
-      </td>
-      <td class="field">
-        <span class="ui input">
-          <input type="text" name="category" autofocus required title = "Please include a valid category" placeholder="category" value = "{{category}}">         
-        </span>
-      </td>
-      
-      <td class="field">
-        <span class="ui input">
-          <input type="text" name="quantity" autofocus required title = "Please include a valid quantity" placeholder="quantity" value = "{{quantity}}">         
-        </span>
-      </td>
-    
-      <td class="center aligned">
-        <button class="ui submit icon button"><i class="ui pencil alternate icon"></i></button>
-      </td>
-      <td class="center aligned">
-        <a href="/basket/{{../basket.id}}/deleteproduct/{{id}}" class="ui icon button delprod">
-          <i class="ui trash icon"></i>
-        </a>
-      </td>
-    </tr>
+    <form class="ui form" action="/basket/{{../basket.id}}/updateproduct/{{id}}" method="POST">
+      <tr>
+        <td class="field">
+          <input type="text" name="name" required title="Please include a valid name" placeholder="Name" value="{{name}}">
+        </td>
+        <td class="field">
+          <input type="text" name="description" required title="Please include a valid description" placeholder="Description" value="{{description}}">
+        </td>
+        <td class="field">
+          <input type="text" name="price" required title="Please include a valid price" placeholder="Price" value="{{price}}">
+        </td>
+        <td class="field">
+          <input type="text" name="category" required title="Please include a valid category" placeholder="Category" value="{{category}}">
+        </td>
+        <td class="field">
+          <input type="text" name="quantity" required title="Please include a valid quantity" placeholder="Quantity" value="{{quantity}}">
+        </td>
+        <td class="center aligned">
+          <button class="ui submit icon button"><i class="ui pencil alternate icon"></i></button>
+        </td>
+        <td class="center aligned">
+          <a href="/basket/{{../basket.id}}/deleteproduct/{{id}}" class="ui icon button delprod">
+            <i class="ui trash icon"></i>
+          </a>
+        </td>
+      </tr>
     </form> 
     {{/each}}
   </tbody>
 </table>
 
+<style>
+  table.custom-table {
+    margin-bottom: 2rem;
+  }
+
+  table.custom-table thead th {
+    background-color: #1b4d89;
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  table.custom-table tbody td.field input {
+    width: 100%;
+  }
+
+  table.custom-table tbody td.center.aligned {
+    vertical-align: middle;
+  }
+
+  table.custom-table tbody tr:hover {
+    background-color: #f9e45b;
+  }
+
+  table.custom-table tbody tr:hover td {
+    color: #1b4d89;
+  }
+
+  table.custom-table tbody tr:hover .delprod i {
+    color: #f9e45b;
+  }
+
+  table.custom-table tbody tr:hover .delprod:hover i {
+    color: #1b4d89;
+  }
+
+  .ui.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .ui.form input {
+    margin-bottom: 1rem;
+  }
+
+  .ui.form .field:last-child input {
+    margin-bottom: 0;
+  }
+
+  .ui.form .button {
+    margin-top: 1rem;
+  }
+
+  .ui.form .button,
+  .ui.form input {
+    background-color: #f9e45b;
+  }
+able.ui.table {
+    width: 100%;
+  }
+
+  table.ui.table td, table.ui.table th {
+    text-align: center !important;
+  }
+
+  table.ui.table tr.fields td, table.ui.table tr.fields th {
+    padding: 0.5rem !important;
+  }
+
+  table.ui.table .delprod {
+    color: #db2828;
+  }
+
+  table.ui.table .delprod:hover {
+    color: #9f3a38;
+  }
+</style>
