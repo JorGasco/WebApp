@@ -1,9 +1,18 @@
 import basketStore from './models/basket-store.js';
 import productStore from './models/product-store.js';
 
-// Function to render the basket view
 function renderBasket() {
-  // ...
+  const basketTemplateSource = $('#basket-template').html();
+  const basketTemplate = Handlebars.compile(basketTemplateSource);
+  const basketHtml = basketTemplate(basketStore.getAllItems());
+  $('#views').html(basketHtml);
+
+  // Attach click event handler for removing items from the basket
+  $('.remove-from-basket').on('click', function () {
+    const productId = $(this).data('product-id');
+    basketStore.removeItem(productId);
+    renderBasket(); // Update the view
+  });
 }
 
 function addProductToBasket(productId) {
