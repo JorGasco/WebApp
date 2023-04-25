@@ -16,15 +16,15 @@ router.get('/about', about.index);
 router.get('/basket/:id', basket.index);
 
 
-router.get('/basket/:id/deleteProduct/:Productid', basket.deleteProduct);
+router.get('/basket/:id/deleteProduct/:productid', basket.deleteProduct);
 router.get('/dashboard/deleteBasket/:id', dashboard.deleteBasket);
 
 
 
-router.post('/basket/:id/addProduct', basket.addProduct);
-router.post('/dashboard/addBasket', dashboard.addBasket);
+router.post('/basket/:id/addproduct', basket.addProduct);
+router.post('/dashboard/addsupplier', dashboard.addBasket);
 
-router.post('/basket/:id/updateProduct/:Productid', basket.updateProduct);
+router.post('/basket/:id/updateproduct/:productid', basket.updateProduct);
 
 // export router module
 export default router;

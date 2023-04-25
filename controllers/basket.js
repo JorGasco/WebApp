@@ -21,9 +21,9 @@ response.render('basket', viewData);
   
 deleteProduct(request, response) {
 const basketId = request.params.id;
-const ProductId = request.params.Productid;
-logger.debug('Deleting Product ${ProductId} from Basket ${basketId}');
-basketStore.removeProduct(basketId, ProductId);
+const productId = request.params.productid;
+logger.debug('Deleting Product ${productId} from Basket ${basketId}');
+basketStore.removeProduct(basketId, productId);
 response.redirect('/basket/' + basketId);
 },
   
@@ -44,17 +44,17 @@ response.redirect('/basket/' + basketId);
 
 updateProduct(request, response) {
 const basketId = request.params.id;
-const ProductId = request.params.Productid;
-logger.debug("updating Product " + ProductId);
+const productId = request.params.productid;
+logger.debug("updating product " + productId);
 const updatedProduct = {
-id: ProductId,
+id: productId,
 name: request.body.name,
 description: request.body.description,
 price: request.body.price,
 category: request.body.category,
 quantity: request.body.quantity
 };
-basketStore.editProduct(basketId, ProductId, updatedProduct);
+basketStore.editProduct(basketId, productId, updatedProduct);
 response.redirect('/basket/' + basketId);
 }
 };
