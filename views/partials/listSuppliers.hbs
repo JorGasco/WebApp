@@ -1,0 +1,17 @@
+{{#each basket}}
+  <section class="ui stacked segment">
+    <h2 class="ui header">
+      {{name}}
+    </h2>
+    <p> Supplier name: {{name}} </p>
+    <p> location: {{location}} </p>
+    <p> email: {{email}} </p>
+    <p> phone: {{phone}} </p>
+    <a href="/basket/{{id}}" class="ui icon button">
+      <i class="icon folder open"></i>
+    </a>
+    <a href="/dashboard/deletebasket/{{id}}" class="ui icon button delbasket">
+      <i class="icon trash"></i>
+    </a>
+  </section>
+{{/each}}
