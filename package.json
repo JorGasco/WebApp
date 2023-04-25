@@ -1,5 +1,5 @@
 {
-  "name": "playlist-app",
+  "name": "Products-app",
   "version": "0.0.1",
   "description": "A little playlist maker",
   "type": "module",
@@ -8,9 +8,13 @@
     "start": "node server.js"
   },
 "dependencies": {
-  "express": "^4.18.2",
-  "express-handlebars": "^6.0.7",
-  "winston": "^3.5.0"
+ "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.2",
+    "lodash": "^4.17.21",
+    "lowdb": "^5.1.0",
+    "uuid": "^9.0.0",
+    "winston": "^3.5.0"
 },
 
   "engines": {
