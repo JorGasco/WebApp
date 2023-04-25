@@ -8,8 +8,16 @@
       "phone": "08565465",
       "products": [
         {
-          "id": "5c48731f-48b3-4a09-b7b6-63442a188942",
-          "name": "Ryan ",
+          "id": "6330148d-f972-40b5-9826-344a17762604",
+          "name": "Áine",
+          "description": "beatiful girl",
+          "price": "infinite",
+          "category": "girlfriend",
+          "quantity": "only 1"
+        },
+        {
+          "id": "bea5e959-52db-407a-9f86-2634e3a8fb73",
+          "name": "Áine",
           "description": "beatiful girl",
           "price": "infinite",
           "category": "girlfriend",
