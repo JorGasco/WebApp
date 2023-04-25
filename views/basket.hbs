@@ -1,28 +1,9 @@
-{{> menu id="basket"}}
+{{> menu}}
 
-<section class="ui segment">
-  <h2 class="ui header">Basket</h2>
-  {{#if items}}
-    <div class="ui items">
-      {{#each items}}
-        <div class="item">
-          <div class="ui small image">
-            <img src="/images/{{image}}">
-          </div>
-          <div class="content">
-            <h3 class="ui header">{{name}}</h3>
-            <div class="description">{{description}}</div>
-            <div class="extra">{{category}}</div>
-            <div class="extra">{{price}}</div>
-            <div class="extra">{{#each features}}<li>{{this}}</li>{{/each}}</div>
-            <button class="ui red button remove-from-basket" data-product-id="{{id}}">
-              Remove from basket <i class="trash icon"></i>
-            </button>
-          </div>
-        </div>
-      {{/each}}
-    </div>
-  {{else}}
-    <p>Your basket is empty.</p>
-  {{/if}}
+<section class="ui center aligned middle aligned segment">
+  <h2 class="ui header">
+    {{basket.name}}
+  </h2>
+  {{> listproducts}}
+  {{> addproduct}}
 </section>

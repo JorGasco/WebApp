@@ -1,42 +1,10 @@
 {
   "basketCollection": [
     {
-      "id": "6138ec1a-b601-4f80-b96f-029059165156",
-      "name": "asdaf",
-      "location": "asdasda",
-      "email": "asdasda",
-      "phone": "156165",
-      "products": []
-    },
-    {
-      "id": "66d0d42a-397b-44f4-b621-d9f1d51ca914",
-      "name": "aine",
-      "location": "waterford",
-      "email": "20098757@mail.wit.ie",
-      "phone": "08565465",
-      "products": []
-    },
-    {
-      "id": "e1472c56-a7ab-4732-9961-6b6587b3f8d0",
-      "name": "Áine",
-      "location": "waterford",
-      "email": "dieginpabon1808@gmail.com",
-      "phone": "08565465",
-      "products": []
-    },
-    {
-      "id": "7b0542e8-836a-4a00-b58d-f333a7de48f0",
+      "id": "29b33dc7-dfe3-45e9-b159-962305e06ef0",
       "name": "Áine",
       "location": "waterford",
       "email": "20098757@mail.wit.ie",
-      "phone": "08565465",
-      "products": []
-    },
-    {
-      "id": "031e27fa-27be-4ddb-b158-ca15a8101e27",
-      "name": "Áine",
-      "location": "waterford",
-      "email": "dieginpabon1808@gmail.com",
       "phone": "08565465",
       "products": []
     }
