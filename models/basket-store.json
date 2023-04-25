@@ -6,7 +6,16 @@
       "location": "waterford",
       "email": "dieginpabon1808@gmail.com",
       "phone": "08565465",
-      "products": []
+      "products": [
+        {
+          "id": "5c48731f-48b3-4a09-b7b6-63442a188942",
+          "name": "Ryan ",
+          "description": "beatiful girl",
+          "price": "infinite",
+          "category": "girlfriend",
+          "quantity": "only 1"
+        }
+      ]
     }
   ]
 }

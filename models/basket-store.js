@@ -16,9 +16,9 @@ getBasket(id) {
 return this.store.findOneBy(this.collection, (collection => collection.id === id));
 },
 
-removeItem(id, itemId) {
-const arrayName = "items";
-this.store.removeItem(this.collection, id, arrayName, itemId);
+removeProduct(id, productId) {
+const arrayName = "products";
+this.store.removeItem(this.collection, id, arrayName, productId);
 },
 
 removeBasket(id) {
@@ -39,9 +39,9 @@ const arrayName = "products";
 this.store.addItem(this.collection, id, arrayName, product);
 },
 
-editItem(id, itemId, updatedItem) {
-const arrayName = "items";
-this.store.editItem(this.collection, id, itemId, arrayName, updatedItem);
+editProduct(id, productId, updatedProduct) {
+const arrayName = "products";
+this.store.editItem(this.collection, id, productId, arrayName, updatedProduct);
 },
 
 };
