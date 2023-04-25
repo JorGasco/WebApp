@@ -1,5 +1,7 @@
 import basketStore from './models/basket-store.js';
 import productStore from './models/product-store.js';
+// Import Handlebars
+import Handlebars from 'handlebars';
 
 function renderBasket() {
   const basketTemplateSource = $('#basket-template').html();
@@ -7,28 +9,52 @@ function renderBasket() {
   const basketHtml = basketTemplate(basketStore.getAllItems());
   $('#views').html(basketHtml);
 
-  // Attach click event handler for removing items from the basket
-  $('.remove-from-basket').on('click', function () {
-    const productId = $(this).data('product-id');
-    basketStore.removeItem(productId);
-    renderBasket(); // Update the view
-  });
+  $('.remove-from-basket').on('click', handleRemoveFromBasket);
 }
 
 function addProductToBasket(productId) {
   const product = productStore.getProductById(productId);
   basketStore.addItem(product);
-  // update the basket view or display a notification
+  renderBasket();
+}
+
+function handleAddToBasketClick() {
+  const productId = $(this).data('product-id');
+  addProductToBasket(productId);
+}
+
+function handleRemoveFromBasket() {
+  const productId = $(this).data('product-id');
+  basketStore.removeItem(productId);
+  renderBasket();
+}
+
+function handleRedButtonClick() {
+  const username = prompt("What's your name?");
+  const welcomeUserDiv = document.querySelector("#welcomeuser");
+  welcomeUserDiv.style.display = "block";
+  welcomeUserDiv.innerHTML = `<p> Hello, ${username},
+    looking forward to hearing your playlists! Click this message to close it.</p>`;
+  welcomeUserDiv.style.cursor = "pointer";
+}
+
+function handleRateButtonClick() {
+  let userRating = parseInt(prompt("Rate this collection (from 1 to 5 stars)"));
+  if (userRating > 5 || userRating < 1 || isNaN(userRating)) {
+    alert("Try again with a number between 1 and 5!");
+  } else {
+    const ratingElement = document.querySelector("#rating");
+    ratingElement.innerHTML = "You gave a rating of: ";
+    for (let i = 0; i < userRating; i++) {
+      ratingElement.innerHTML += "<i class='yellow star icon'></i>";
+    }
+  }
 }
 
 $(document).ready(function () {
-  // Add an event listener for the "Add to Basket" button
-  $(".add-to-basket").on("click", function () {
-    const productId = $(this).data('product-id');
-    addProductToBasket(productId);
-  });
-
-  // The rest of your event listeners
+  $('.add-to-basket').on('click', handleAddToBasketClick);
+  $('.red').on('click', handleRedButtonClick);
+  $('#rateit').on('click', handleRateButtonClick);
 });
 
 const greenbtn = document.querySelector(".green");

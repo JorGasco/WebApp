@@ -7,25 +7,74 @@
     <title>{{title}}</title>
 
     <!-- import the SemanticUI stylesheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" type="text/css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+      type="text/css"
+    />
 
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-
-    <!-- import the Handlebars library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <section class="ui container">
-       {{{body}}}
+      {{{body}}}
     </section>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
-     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
-     crossorigin="anonymous">
+
+    <!-- import the jQuery javascript file -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- import the SemanticUI javascript file -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"
+    ></script>
+
+    <!-- import the Handlebars javascript files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+    <!-- import the basket template -->
+    <script id="basket-template" type="text/x-handlebars-template">
+      {{> menu id="basket"}}
+
+      <section class="ui segment">
+        <h2 class="ui header">Basket</h2>
+        {{#if items}}
+        <div class="ui items">
+          {{#each items}}
+          <div class="item">
+            <div class="ui small image">
+              <img src="/images/{{image}}" />
+            </div>
+            <div class="content">
+              <h3 class="ui header">{{name}}</h3>
+              <div class="description">{{description}}</div>
+              <div class="extra">{{category}}</div>
+              <div class="extra">{{price}}</div>
+              <div class="extra">
+                {{#each features}}
+                <li>{{this}}</li>
+                {{/each}}
+              </div>
+              <button
+                class="ui red button remove-from-basket"
+                data-product-id="{{id}}"
+              >
+                Remove from basket <i class="trash icon"></i>
+              </button>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+        {{else}}
+        <p>Your basket is empty.</p>
+        {{/if}}
+      </section>
     </script>
-    <!-- import the SemanticUI javascript file -->   
-    <script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
-    
+
     <!-- import the webpage's javascript file -->
     <script src="/script.js"></script>
   </body>
