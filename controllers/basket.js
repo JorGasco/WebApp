@@ -22,7 +22,7 @@ response.render('basket', viewData);
 deleteProduct(request, response) {
 const basketId = request.params.id;
 const ProductId = request.params.Productid;
-logger.debug(Deleting Product ${ProductId} from Basket ${basketId});
+logger.debug('Deleting Product ${ProductId} from Basket ${basketId}');
 basketStore.removeProduct(basketId, ProductId);
 response.redirect('/basket/' + basketId);
 },

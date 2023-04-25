@@ -24,7 +24,7 @@ router.get('/dashboard/deleteBasket/:id', dashboard.deleteBasket);
 router.post('/basket/:id/addProduct', basket.addProduct);
 router.post('/dashboard/addBasket', dashboard.addBasket);
 
-router.post('/basket/:id/updateProduct/:Productid', basket.updateSong);
+router.post('/basket/:id/updateProduct/:Productid', basket.updateProduct);
 
 // export router module
 export default router;
