@@ -15,6 +15,13 @@
     {{#each basket.products}}
     <form class = "ui stacked segment form" action="/basket/{{../basket.id}}/updatebasket/{{id}}" method="POST">
     <tr class="fields">
+      
+       <td class="field">
+        <span class="ui input">
+          <input type="text" name="name" required title = "Please include a valid Name" placeholder="price" value = "{{name}}">
+        </span>
+      </td>
+      
       <td class="field">
         <span class="ui input">
          <input type="text" name="description" autofocus required title = "Please include a valid description" placeholder="description" value = "{{description}}">

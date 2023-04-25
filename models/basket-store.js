@@ -34,9 +34,9 @@ addBasket(basket) {
 this.store.addCollection(this.collection, basket);
 },
 
-addItem(id, item) {
-const arrayName = "items";
-this.store.addItem(this.collection, id, arrayName, item);
+addProduct(id, product) {
+const arrayName = "products";
+this.store.addItem(this.collection, id, arrayName, product);
 },
 
 editItem(id, itemId, updatedItem) {
