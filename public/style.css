@@ -28,12 +28,21 @@ border-radius: 5px;
 transition: all 0.3s ease-in-out;
 }
 
+h3 {
+  font-style: italic;
+  color: #373fff;
+}
+
+
+
 @media screen and (min-width: 768px) {
 img,
 video {
 max-width: 100%;
 }
 }
+
+
 
 .welcome {
 margin: 2rem;
@@ -67,9 +76,7 @@ background-color: #EAA200;
 margin-right: 0;
 }
 
-#readmore {
-display: none;
-}
+
 
 .ui.message p {
 margin-bottom: 0;
