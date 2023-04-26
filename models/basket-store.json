@@ -1,11 +1,19 @@
 {
   "basketCollection": [
     {
-      "id": "57dbfb7e-e423-487b-b455-b3cc3d781e44",
+      "id": "04b75cd6-949e-4249-9059-45bb277aa73f",
       "name": "Áine",
       "location": "waterford",
-      "email": "dieginpabon1808@gmail.com",
-      "phone": "a",
+      "email": "20098757@mail.wit.ie",
+      "phone": "08565465",
+      "products": []
+    },
+    {
+      "id": "914b0b1f-0f92-4bfb-9579-97302c60ccd8",
+      "name": "Áine",
+      "location": "waterford",
+      "email": "20098757@mail.wit.ie",
+      "phone": "08565465",
       "products": []
     }
   ]
