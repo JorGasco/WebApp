@@ -1,3 +1,12 @@
 {
-  "basketCollection": []
+  "basketCollection": [
+    {
+      "id": "57dbfb7e-e423-487b-b455-b3cc3d781e44",
+      "name": "Áine",
+      "location": "waterford",
+      "email": "dieginpabon1808@gmail.com",
+      "phone": "a",
+      "products": []
+    }
+  ]
 }

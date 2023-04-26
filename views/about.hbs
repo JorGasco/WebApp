@@ -1,7 +1,7 @@
 {{> menu id="about"}}
 
-<section class="ui center aligned middle aligned segment custom-segment">
-  <h2 class="ui header">Company Owner</h2>
+<section class="ui center aligned middle aligned segment custom-segment" style="background-color: #1b4d89; color: #ffffff;">
+  <h2 class="ui header" style="color: #ffffff;">Company Owner</h2>
 
   <div class="ui centered cards">
     {{#each developers}}
@@ -10,12 +10,23 @@
   </div>
 </section>
 
- 
-
+<div class="mapouter" style="margin-top: 2rem;">
+  <div class="gmap_canvas">
+    <iframe width="432" height="423" id="gmap_canvas" 
+      src="https://maps.google.com/maps?q=Academia%20Paname%C3%B1a%20de%20Taekwondo&t=&z=19&ie=UTF8&iwloc=&output=embed" 
+      frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+    </iframe>
+    <a href="https://www.whatismyip-address.com/divi-discount/"></a>
+    <br>
+    <style>.mapouter{position:relative;text-align:right;height:423px;width:432px;}</style>
+    <a href="https://www.embedgooglemap.net">iframe google maps</a>
+    <style>.gmap_canvas {overflow:hidden;background:none!important;height:423px;width:432px;}</style>
+  </div>
+</div>
 
 <style>
   .custom-segment {
-    background-color: #F7F7F7;
+    background-color: #f9e45b;
     background-image: url('https://www.example.com/background-image.jpg');
     background-size: cover;
     background-position: center;
@@ -65,6 +76,7 @@
   .ui.card .header {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    color: #1b4d89;
   }
 
   .ui.card .description {
@@ -83,6 +95,7 @@
     align-items: center;
     font-size: 1.2rem;
     font-weight: bold;
+    color: #ffffff;
   }
 
   .ui.card .extra i {
