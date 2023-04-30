@@ -6,6 +6,7 @@ import express from "express";
 import exphbs from "express-handlebars";
 import logger from "./utils/logger.js";
 import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
 
 // initialise project
 const app = express();
@@ -13,6 +14,7 @@ const app = express();
 // static files output to public folder
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false, }));
+app.use(cookieParser());
 
 // use handlebars as view engine
 const handlebars = exphbs.create({ extname: ".hbs" });
@@ -27,3 +29,4 @@ app.use("/", routes);
 const listener = app.listen(process.env.PORT || 4000, function () {
   logger.info("Your app is listening on port " + listener.address().port);
 });
+
