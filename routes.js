@@ -6,6 +6,15 @@ import welcome from './controllers/welcome.js';
 import dashboard from './controllers/dashboard.js';
 import about from './controllers/about.js';
 import basket from './controllers/basket.js';
+import accounts from './controllers/accounts.js';
+
+// connect routes to controllers
+router.get('/', accounts.index);
+router.get('/login', accounts.login);
+router.get('/signup', accounts.signup);
+router.get('/logout', accounts.logout);
+router.post('/register', accounts.register);
+router.post('/authenticate', accounts.authenticate);
 
 // connect routes to controllers
 router.get('/', welcome.index);
