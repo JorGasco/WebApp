@@ -17,7 +17,7 @@ router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 
 // connect routes to controllers
-router.get('/', welcome.index);
+router.get('/start', welcome.index);
 router.get('/dashboard', dashboard.index);
 router.get('/about', about.index);
 
