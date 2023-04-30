@@ -1,19 +1,28 @@
 {
   "basketCollection": [
     {
-      "id": "04b75cd6-949e-4249-9059-45bb277aa73f",
-      "name": "Áine",
-      "location": "waterford",
-      "email": "20098757@mail.wit.ie",
-      "phone": "08565465",
-      "products": []
+      "id": "d29d42e5-b828-49f0-b728-08c522400fc8",
+      "name": "fs",
+      "location": "dfs",
+      "email": "sdf",
+      "phone": "sdf",
+      "products": [
+        {
+          "id": "6d591f9a-d90a-427d-886d-ae31022ea99b",
+          "name": "ger",
+          "description": "gerg",
+          "price": "erg",
+          "category": "eger",
+          "quantity": "gergeg"
+        }
+      ]
     },
     {
-      "id": "914b0b1f-0f92-4bfb-9579-97302c60ccd8",
+      "id": "9f27297a-427c-4335-8105-b78e22ea7e85",
       "name": "Áine",
-      "location": "waterford",
-      "email": "20098757@mail.wit.ie",
-      "phone": "08565465",
+      "location": "ergergerg",
+      "email": "egregerg",
+      "phone": "ergergegre",
       "products": []
     }
   ]
