@@ -5,7 +5,7 @@ import logger from '../utils/logger.js';
 import developerStore from '../models/developer-store.js';
 import accounts from './accounts.js';
 import { v4 as uuidv4 } from 'uuid';
-import commentsStore from './comments-store.js';
+
 
 // create about object
 const about = {
