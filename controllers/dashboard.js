@@ -6,8 +6,19 @@ import { v4 as uuidv4 } from 'uuid';
 import basketStore from '../models/basket-store.js';
 import accounts from './accounts.js';
 
+import cloudinary from 'cloudinary';
 
-// create dashboard object
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
+try {
+  const env = require("../.data/.env.json");
+  cloudinary.config(env.cloudinary);
+}
+catch(e) {
+  logger.info('You must provide a Cloudinary credentials file - see README.md');
+  process.exit(1);
+}
 const dashboard = {
 
   // index method - responsible for creating and rendering the view

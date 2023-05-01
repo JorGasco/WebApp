@@ -1,5 +1,5 @@
 'use strict';
-
+import cloudinary from 'cloudinary';
 import logger from '../utils/logger.js';
 import JsonStore from './json-store.js';
 

@@ -4,7 +4,19 @@ import logger from '../utils/logger.js';
 import { v4 as uuidv4 } from 'uuid';
 import basketStore from '../models/basket-store.js';
 import accounts from './accounts.js';
+import cloudinary from 'cloudinary';
 
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
+try {
+  const env = require("../.data/.env.json");
+  cloudinary.config(env.cloudinary);
+}
+catch(e) {
+  logger.info('You must provide a Cloudinary credentials file - see README.md');
+  process.exit(1);
+}
 
 const basket = {
 index(request, response) {
@@ -29,7 +41,8 @@ basketStore.removeProduct(basketId, productId);
 response.redirect('/basket/' + basketId);
 },
   
-addProduct(request, response) {
+async addProduct(request, response) {
+  function uploader(){
    const loggedInUser = accounts.getCurrentUser(request);
   
 const basketId = request.params.id;
