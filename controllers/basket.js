@@ -39,6 +39,7 @@ description: request.body.description,
 price: request.body.price,
 category: request.body.category,
 quantity: request.body.quantity
+picture: request.files.picture,
 };
 basketStore.addProduct(basketId, newProduct);
 response.redirect('/basket/' + basketId);

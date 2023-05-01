@@ -48,7 +48,9 @@ const dashboard = {
       location: request.body.location,
       email: request.body.email,
       phone: request.body.phone,
-      products: [],
+      products: [
+        
+      ],
     };
     logger.debug('Creating a new Basket' + newBasket);
     basketStore.addBasket(newBasket);

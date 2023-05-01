@@ -7,6 +7,7 @@ import exphbs from "express-handlebars";
 import logger from "./utils/logger.js";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import fileUpload from "express-fileupload";
 
 // initialise project
 const app = express();
@@ -15,6 +16,9 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false, }));
 app.use(cookieParser());
+app.use(fileUpload({
+  useTempFiles: true
+}));
 
 // use handlebars as view engine
 const handlebars = exphbs.create({ extname: ".hbs" });
