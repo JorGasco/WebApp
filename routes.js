@@ -7,7 +7,34 @@ import dashboard from './controllers/dashboard.js';
 import about from './controllers/about.js';
 import basket from './controllers/basket.js';
 import accounts from './controllers/accounts.js';
-import commentStore from './models/commentStore.js';
+
+
+
+
+
+const commentsStore = require('./commentsStore');
+
+app.post('/comments', function(req, res) {
+  const name = req.body.name;
+  const comment = req.body.comment;
+
+  const newComment = {
+    id: commentsStore.length + 1,
+    name: name,
+    comment: comment
+  };
+
+  commentsStore.push(newComment);
+
+  res.redirect('/about');
+});
+
+
+
+
+
+
+
 // connect routes to controllers
 router.get('/', accounts.index);
 router.get('/login', accounts.login);
@@ -16,12 +43,27 @@ router.get('/logout', accounts.logout);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // connect routes to controllers
 router.get('/start', welcome.index);
 
 router.get('/dashboard', dashboard.index);
 router.get('/about', about.index);
-router.post('/about/comment', about.addComment);
+
 
 router.get('/basket/:id', basket.index);
 
