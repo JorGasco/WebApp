@@ -33,21 +33,21 @@
       "products": []
     },
     {
-      "id": "448e26e2-9ebd-43a7-afd8-0a4f1bfc1ca5",
+      "id": "f010b164-957b-4278-a841-1defbe09dd7e",
       "userid": "4c5bb2ee-e27c-4564-b443-1a5290db6e10",
-      "name": "Áine",
-      "description": "lo",
-      "price": "erg",
-      "category": "eger",
-      "quantity": "gergeg",
-      "picture": "http://res.cloudinary.com/dymzmvn3j/image/upload/v1682923275/ozmrwodxwnecww9tyhzj.jpg",
+      "name": "Nike Shoes",
+      "description": "white and black",
+      "price": "$100",
+      "category": "Sports",
+      "quantity": "1",
+      "picture": "http://res.cloudinary.com/dymzmvn3j/image/upload/v1682925101/ptarv27wgsry0hpkguvw.png",
       "products": [
         {
-          "id": "aa4e38d5-a511-42c6-8d6c-316b53946c00",
-          "name": "aine",
-          "location": "asd",
-          "email": "20098757@mail.wit.ie",
-          "phone": "asd"
+          "id": "7d615ea3-e5be-46d9-ade2-e1b633bff907",
+          "name": "Nike.inc",
+          "location": "Usa",
+          "email": "nike@gmail.com",
+          "phone": "08565465"
         }
       ]
     }

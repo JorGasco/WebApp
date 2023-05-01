@@ -1,5 +1,5 @@
 {{> menu}}
-
+{{#if basket.products}}
 <table class="ui fixed striped table custom-table">
   <thead>
     <tr>
@@ -41,6 +41,7 @@
     {{/each}}
   </tbody>
 </table>
+{{/if}}
 <style>
   table.custom-table {
     margin-bottom: 2rem;
