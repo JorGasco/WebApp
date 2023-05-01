@@ -8,26 +8,28 @@ import accounts from './accounts.js';
 
 
 // create dashboard object
-const  dashboard = {
+const dashboard = {
 
   // index method - responsible for creating and rendering the view
-   index(request, response) {
+  index(request, response) {
     logger.info('dashboard rendering');
     const loggedInUser = accounts.getCurrentUser(request);
     if (loggedInUser) {
       
-    // create view data object (contains data to be sent to the view e.g. page title)
-    const viewData = {
-      title: 'Basket App Dashboard',
-      baskets: basketStore.getUserBaskets(loggedInUser.id),
-      fullname: loggedInUser.firtname + ' ' + loggedInUser.lastName,
-    };
+      // create view data object (contains data to be sent to the view e.g. page title)
+      const viewData = {
+        title: 'Basket App Dashboard',
+        baskets: basketStore.getUserBaskets(loggedInUser.id),
+        fullname: loggedInUser.firstname + ' ' + loggedInUser.lastName,
+      };
 
-    // render the dashboard view and pass through the data
-    logger.info('about to render', viewData.baskets);
-    response.render('dashboard', viewData);
-  }
-         else response.redirect('/');
+      // render the dashboard view and pass through the data
+      logger.info('about to render', viewData.baskets);
+      response.render('dashboard', viewData);
+    }
+    else {
+      response.redirect('/');
+    }
   },
 
   deleteBasket(request, response) {
@@ -38,9 +40,10 @@ const  dashboard = {
   },
 
   addBasket(request, response) {
-     const loggedInUser = accounts.getCurrentUser(request);
+    const loggedInUser = accounts.getCurrentUser(request);
     const newBasket = {
       id: uuidv4(),
+      userid: loggedInUser.id,
       name: request.body.name,
       location: request.body.location,
       email: request.body.email,
