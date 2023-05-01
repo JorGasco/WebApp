@@ -35,13 +35,14 @@ addProduct(request, response) {
 const basketId = request.params.id;
 const basket = basketStore.getBasket(basketId);
 const newProduct = {
-id: uuidv4(),
-name: request.body.name,
-description: request.body.description,
-price: request.body.price,
-category: request.body.category,
-quantity: request.body.quantity,
-picture:  request.files.picture
+  
+  id: uuidv4(),
+     
+      name: request.body.name,
+      location: request.body.location,
+      email: request.body.email,
+      phone: request.body.phone,
+  
 
 };
 logger.debug("Creating a new Product" + newProduct);
@@ -66,10 +67,9 @@ logger.debug("updating product " + productId);
 const updatedProduct = {
 id: productId,
 name: request.body.name,
-description: request.body.description,
-price: request.body.price,
-category: request.body.category,
-quantity: request.body.quantity
+      location: request.body.location,
+      email: request.body.email,
+      phone: request.body.phone,
 };
 basketStore.editProduct(basketId, productId, updatedProduct);
 response.redirect('/basket/' + basketId);

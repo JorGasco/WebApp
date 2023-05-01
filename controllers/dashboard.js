@@ -54,13 +54,14 @@ const dashboard = {
     const loggedInUser = accounts.getCurrentUser(request);
     const newBasket = {
       id: uuidv4(),
-      userid: loggedInUser.id,
-      name: request.body.name,
-      location: request.body.location,
-      email: request.body.email,
-      phone: request.body.phone,
-      products: [
-        
+       userid: loggedInUser.id,
+       name: request.body.name,
+      description: request.body.description,
+       price: request.body.price,
+       category: request.body.category,
+       quantity: request.body.quantity,
+       picture:  request.files.picture,
+        products: [
       ],
     };
     logger.debug('Creating a new Basket' + newBasket);
