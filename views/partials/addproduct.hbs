@@ -1,29 +1,21 @@
-<form class="ui stacked segment form" action="/basket/{{basket.id}}/addproduct" method="POST" enctype="multipart/form-data">
+<form class="ui stacked segment form" action="/basket/{{basket.id}}/addproduct" method="POST">
   <div class="four fields">
     <div class="field">
       <label for="name">Name</label>
       <input placeholder="Name" type="text" name="name" autofocus required>
     </div>
     <div class="field">
-      <label for="description">Description</label>
-      <input placeholder="Description" type="text" name="description" required>
+      <label for="location">Location</label>
+      <input placeholder="Location" type="text" name="location" required>
     </div>
     <div class="field">
-      <label for="price">Price</label>
-      <input placeholder="Price" type="text" name="price" required>
+      <label for="email">Email</label>
+      <input placeholder="Email" type="email" name="email" required>
     </div>
     <div class="field">
-      <label for="category">Category</label>
-      <input placeholder="Category" type="text" name="category" required>
-    </div>
-    <div class="field">
-      <label for="quantity">Quantity</label>
-      <input placeholder="Quantity" type="text" name="quantity" required>
-    </div>
-    <div class="field">
-      <label for="picture">Image</label>
-      <input type="file" name="picture" required>
+      <label for="phone">Phone</label>
+      <input placeholder="Phone" type="tel" name="phone" required>
     </div>
   </div>
-  <button class="ui blue submit button">Add Product</button>
+  <button class="ui blue submit button">Add Supplier to Product</button>
 </form>

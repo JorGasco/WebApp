@@ -27,15 +27,13 @@ const productId = request.params.productid;
 logger.debug('Deleting Product ${productId} from Basket ${basketId}');
 basketStore.removeProduct(basketId, productId);
 response.redirect('/basket/' + basketId);
+  
+  
 },
-  
 addProduct(request, response) {
-   const loggedInUser = accounts.getCurrentUser(request);
-  
 const basketId = request.params.id;
 const basket = basketStore.getBasket(basketId);
 const newProduct = {
-  
   id: uuidv4(),
      
       name: request.body.name,
@@ -45,13 +43,9 @@ const newProduct = {
   
 
 };
-logger.debug("Creating a new Product" + newProduct);
-    basketStore.addProduct(newProduct, function() {
 basketStore.addProduct(basketId, newProduct);
 response.redirect('/basket/' + basketId);
-    });
-  },
-
+},
 
 
 
