@@ -1,51 +1,49 @@
 {{> menu}}
 
-<div class="ui centered cards">
-  {{#each basket.products}}
-  <div class="ui card">
-    <div class="image">
-      <img src="{{picture}}">
-    </div>
-    <div class="content">
-      <a class="header">{{name}}</a>
-    </div>
-    <div class="extra content">
-      <form class="ui form" action="/basket/{{../basket.id}}/updateproduct/{{id}}" method="POST">
-        <div class="fields">
-          <div class="field">
-            <label>Name</label>
-            <input type="text" name="name" required title="Please include a valid name" placeholder="Name" value="{{name}}">
-          </div>
-          <div class="field">
-            <label>Description</label>
-            <input type="text" name="description" required title="Please include a valid description" placeholder="Description" value="{{description}}">
-          </div>
-          <div class="field">
-            <label>Price</label>
-            <input type="text" name="price" required title="Please include a valid price" placeholder="Price" value="{{price}}">
-          </div>
-          <div class="field">
-            <label>Category</label>
-            <input type="text" name="category" required title="Please include a valid category" placeholder="Category" value="{{category}}">
-          </div>
-          <div class="field">
-            <label>Quantity</label>
-            <input type="text" name="quantity" required title="Please include a valid quantity" placeholder="Quantity" value="{{quantity}}">
-          </div>
-          <div class="field">
-            <label>Image</label>
-            <input type="file" name="picture" required title="Please include a valid Picture" placeholder="Picture" value="{{picture}}">
-          </div>
-        </div>
-        <button class="ui submit icon button"><i class="ui pencil alternate icon"></i></button>
-        <a href="/basket/{{../basket.id}}/deleteproduct/{{id}}" class="ui icon button delprod">
-          <i class="ui trash icon"></i>
-        </a>
-      </form>
-    </div>
-  </div>
-  {{/each}}
-</div>
+<table class="ui fixed striped table custom-table">
+  <thead>
+    <tr>
+      <th class="four wide">Name</th>
+      <th class="four wide">Description</th>
+      <th class="two wide">Price</th>
+      <th class="two wide">Category</th>
+      <th class="two wide">Quantity</th>
+      <th class="two wide"></th>
+      <th class="two wide"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each basket.products}}
+    <form class="ui form" action="/basket/{{../basket.id}}/updateproduct/{{id}}" method="POST">
+      <tr>
+        <td class="field">
+          <input type="text" name="name" required title="Please include a valid name" placeholder="Name" value="{{name}}">
+        </td>
+        <td class="field">
+          <input type="text" name="description" required title="Please include a valid description" placeholder="Description" value="{{description}}">
+        </td>
+        <td class="field">
+          <input type="text" name="price" required title="Please include a valid price" placeholder="Price" value="{{price}}">
+        </td>
+        <td class="field">
+          <input type="text" name="category" required title="Please include a valid category" placeholder="Category" value="{{category}}">
+        </td>
+        <td class="field">
+          <input type="text" name="quantity" required title="Please include a valid quantity" placeholder="Quantity" value="{{quantity}}">
+        </td>
+        <td class="center aligned">
+          <button class="ui submit icon button"><i class="ui pencil alternate icon"></i></button>
+        </td>
+        <td class="center aligned">
+          <a href="/basket/{{../basket.id}}/deleteproduct/{{id}}" class="ui icon button delprod">
+            <i class="ui trash icon"></i>
+          </a>
+        </td>
+      </tr>
+    </form> 
+    {{/each}}
+  </tbody>
+</table>
 
 <style>
   table.custom-table {
