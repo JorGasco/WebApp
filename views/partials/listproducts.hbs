@@ -1,47 +1,49 @@
 {{> menu}}
-{{#if basket.products}}
-<table class="ui fixed striped table custom-table">
-  <thead>
-    <tr>
-      <th class="four wide">Name</th>
-      <th class="four wide">Location</th>
-      <th class="two wide">Email</th>
-      <th class="two wide">Phone</th>
-     
-      <th class="two wide"></th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each basket.products}}
-    <form class="ui form" action="/basket/{{../basket.id}}/updateproduct/{{id}}" method="POST">
+{{#unless basket.products}}
+
+  <h3 class="ui center aligned message">There are no Suppliers for this Product, Add one or Many Suppliers</h3>
+{{else}}
+  <table class="ui fixed striped table custom-table">
+    <thead>
       <tr>
-        <td class="field">
-          <input type="text" name="name" required title="Please include a valid name" placeholder="Name" value="{{name}}">
-        </td>
-        <td class="field">
-          <input type="text" name="location" required title="Please include a valid location" placeholder="Location" value="{{location}}">
-        </td>
-        <td class="field">
-          <input type="text" name="email" required title="Please include a valid email" placeholder="Email" value="{{email}}">
-        </td>
-        <td class="field">
-          <input type="text" name="phone" required title="Please include a valid phone number" placeholder="Phone" value="{{phone}}">
-        </td>
-       
-        <td class="center aligned">
-          <button class="ui submit icon button"><i class="ui pencil alternate icon"></i></button>
-        </td>
-        <td class="center aligned">
-          <a href="/basket/{{../basket.id}}/deleteproduct/{{id}}" class="ui icon button delprod">
-            <i class="ui trash icon"></i>
-          </a>
-        </td>
+        <th class="four wide">Name</th>
+        <th class="four wide">Location</th>
+        <th class="two wide">Email</th>
+        <th class="two wide">Phone</th>
+        <th class="two wide"></th>
+        <th class="two wide"></th>
       </tr>
-    </form> 
-    {{/each}}
-  </tbody>
-</table>
-{{/if}}
+    </thead>
+    <tbody>
+      {{#each basket.products}}
+      <form class="ui form" action="/basket/{{../basket.id}}/updateproduct/{{id}}" method="POST">
+        <tr>
+          <td class="field">
+            <input type="text" name="name" required title="Please include a valid name" placeholder="Name" value="{{name}}">
+          </td>
+          <td class="field">
+            <input type="text" name="location" required title="Please include a valid location" placeholder="Location" value="{{location}}">
+          </td>
+          <td class="field">
+            <input type="text" name="email" required title="Please include a valid email" placeholder="Email" value="{{email}}">
+          </td>
+          <td class="field">
+            <input type="text" name="phone" required title="Please include a valid phone number" placeholder="Phone" value="{{phone}}">
+          </td>
+          <td class="center aligned">
+            <button class="ui submit icon button"><i class="ui pencil alternate icon"></i></button>
+          </td>
+          <td class="center aligned">
+            <a href="/basket/{{../basket.id}}/deleteproduct/{{id}}" class="ui icon button delprod">
+              <i class="ui trash icon"></i>
+            </a>
+          </td>
+        </tr>
+      </form> 
+      {{/each}}
+    </tbody>
+  </table>
+{{/unless}} 
 <style>
   table.custom-table {
     margin-bottom: 2rem;

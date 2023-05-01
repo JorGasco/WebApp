@@ -20,6 +20,13 @@
       "email": "20098757@mail.wit.ie",
       "password": "Secret123",
       "id": "4c5bb2ee-e27c-4564-b443-1a5290db6e10"
+    },
+    {
+      "firstName": "Lola",
+      "lastName": "Rivers",
+      "email": "diegoptwit@gmail.com",
+      "password": "Digo123",
+      "id": "eaf31cc1-904b-459e-874b-1d12df9b88eb"
     }
   ]
 }

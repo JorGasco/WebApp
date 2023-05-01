@@ -48,8 +48,26 @@
           "location": "Usa",
           "email": "nike@gmail.com",
           "phone": "08565465"
+        },
+        {
+          "id": "1b0f430e-b535-4789-9685-a9f4cce4dad0",
+          "name": "Áine",
+          "location": "waterford",
+          "email": "20098757@mail.wit.ie",
+          "phone": "asd"
         }
       ]
+    },
+    {
+      "id": "8ad53bdb-d0c7-4b7f-ba70-9ce614b9fc98",
+      "userid": "eaf31cc1-904b-459e-874b-1d12df9b88eb",
+      "name": "Ryan ",
+      "description": "gerg",
+      "price": "erg",
+      "category": "Sports",
+      "quantity": "gergeg",
+      "picture": "http://res.cloudinary.com/dymzmvn3j/image/upload/v1682926118/bfbzkowvi5ientktvq5r.png",
+      "products": []
     }
   ]
 }
