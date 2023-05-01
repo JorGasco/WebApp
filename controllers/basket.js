@@ -42,7 +42,7 @@ price: request.body.price,
 category: request.body.category,
 quantity: request.body.quantity,
 picture:  request.files.picture
-//picture: request.files.picture,
+
 };
 logger.debug("Creating a new Product" + newProduct);
     basketStore.addProduct(newProduct, function() {
@@ -50,6 +50,14 @@ basketStore.addProduct(basketId, newProduct);
 response.redirect('/basket/' + basketId);
     });
   },
+
+
+
+
+
+
+  
+  
 updateProduct(request, response) {
   
 const basketId = request.params.id;

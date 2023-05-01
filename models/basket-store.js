@@ -35,22 +35,23 @@ this.store.addCollection(this.collection, basket);
 },
 
 async addProduct(product, response) {
-  function uploader(){
-    return new Promise(function(resolve, reject) {  
-      cloudinary.uploader.upload(product.picture.tempFilePath,function(result,err){
-        if(err){console.log(err);}
-        resolve(result);
+  if (product.picture && product.picture.tempFilePath) {
+    function uploader(){
+      return new Promise(function(resolve, reject) {  
+        cloudinary.uploader.upload(product.picture.tempFilePath,function(result,err){
+          if(err){console.log(err);}
+          resolve(result);
+        });
       });
-    });
+    }
+    let result = await uploader();
+    logger.info('cloudinary result', result);
+    product.picture = result.url;
   }
-  let result = await uploader();
-  logger.info('cloudinary result', result);
-  product.picture = result.url;
 
   this.store.addCollection(this.collection, product);
   response();
 },
-
 
 editProduct(id, productId, updatedProduct) {
 const arrayName = "products";
