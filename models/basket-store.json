@@ -1,65 +1,16 @@
 {
   "basketCollection": [
     {
-      "id": "d29d42e5-b828-49f0-b728-08c522400fc8",
-      "name": "fs",
-      "location": "dfs",
-      "email": "sdf",
-      "phone": "sdf",
-      "products": [
-        {
-          "id": "6d591f9a-d90a-427d-886d-ae31022ea99b",
-          "name": "ger",
-          "description": "gerg",
-          "price": "erg",
-          "category": "eger",
-          "quantity": "gergeg"
-        }
-      ]
-    },
-    {
-      "id": "9f27297a-427c-4335-8105-b78e22ea7e85",
+      "id": "0d3bf0a8-dfb9-49df-8d75-898c94aee804",
       "name": "Áine",
-      "location": "ergergerg",
-      "email": "egregerg",
-      "phone": "ergergegre",
-      "products": []
-    },
-    {
-      "id": "f4376c7b-9296-4db3-9654-f123997d7121",
-      "name": "Ryan ",
       "location": "waterford",
       "email": "20098757@mail.wit.ie",
       "phone": "08565465",
       "products": []
     },
     {
-      "id": "b2e35639-72fe-49b3-9c7a-e6b0526afe90",
-      "name": "a",
-      "location": "asd",
-      "email": "dieginpabon1808@gmail.com",
-      "phone": "a",
-      "products": []
-    },
-    {
-      "id": "abe7fd87-b8e5-499e-8e9a-eee178fb04da",
+      "id": "80168397-08c8-4bab-9b7c-74e6df838f4e",
       "name": "aine",
-      "location": "a",
-      "email": "dieginpabon1808@gmail.com",
-      "phone": "08565465",
-      "products": []
-    },
-    {
-      "id": "daf38417-c625-46c5-a2fe-52c854d522b0",
-      "name": "Áine",
-      "location": "waterford",
-      "email": "dieginpabon1808@gmail.com",
-      "phone": "08565465",
-      "products": []
-    },
-    {
-      "id": "4879cc61-48fa-4808-82e4-e715503ce271",
-      "name": "Ryan ",
       "location": "waterford",
       "email": "20098757@mail.wit.ie",
       "phone": "08565465",
