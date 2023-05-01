@@ -4,19 +4,22 @@
 import logger from '../utils/logger.js';
 import { v4 as uuidv4 } from 'uuid';
 import basketStore from '../models/basket-store.js';
+import accounts from './accounts.js';
+
 
 // create dashboard object
 const  dashboard = {
 
   // index method - responsible for creating and rendering the view
-  index(request, response) {
-    // display confirmation message in log
+   index(request, response) {
     logger.info('dashboard rendering');
-
+    const loggedInUser = accounts.getCurrentUser(request);
+    if (loggedInUser) {
+      
     // create view data object (contains data to be sent to the view e.g. page title)
     const viewData = {
       title: 'Basket App Dashboard',
-      baskets: basketStore.getAllBaskets(),
+      baskets: basketStore.getUserBasket(),
     };
 
     // render the dashboard view and pass through the data
