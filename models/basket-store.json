@@ -33,13 +33,13 @@
       "products": []
     },
     {
-      "id": "0b1e209f-7582-4ddd-b3ea-4066a6755f8e",
+      "id": "ef0c892d-2eab-4182-9eb3-234f73d0ad90",
       "userid": "4c5bb2ee-e27c-4564-b443-1a5290db6e10",
-      "name": "Ryan ",
-      "description": "lo",
-      "price": "infinilote",
-      "category": "eger",
-      "quantity": "5",
+      "name": "Áine",
+      "description": "beatiful girl",
+      "price": "infinite",
+      "category": "girlfriend",
+      "quantity": "only 1",
       "picture": {
         "name": "FWL_Sept_BlogImages_1_Warehouse.jpg",
         "data": {
@@ -48,41 +48,12 @@
         },
         "size": 139326,
         "encoding": "7bit",
-        "tempFilePath": "/app/tmp/tmp-1-1682920946761",
+        "tempFilePath": "/app/tmp/tmp-2-1682921963051",
         "truncated": false,
         "mimetype": "image/jpeg",
         "md5": "abcf1998dd66baf73911d7e6c589d74a"
       },
-      "products": [
-        {
-          "id": "2fe80a3a-6744-45ad-989e-78f6f3d1ee31",
-          "name": "Ryan ",
-          "location": "asd",
-          "email": "homer@simpson.com",
-          "phone": "08565465"
-        },
-        {
-          "id": "5ed93d33-ecad-4bbc-a3d7-f6f8290e3fb3",
-          "name": "aine",
-          "location": "asd",
-          "email": "homer@simpson.com",
-          "phone": "asd"
-        },
-        {
-          "id": "19191393-76e2-4fab-9fa7-e33aa7c3d004",
-          "name": "aine",
-          "location": "asd",
-          "email": "dieginpabon1808@gmail.com",
-          "phone": "asd"
-        },
-        {
-          "id": "21cda267-1d6d-4b93-ba16-1f5dbb28d60d",
-          "name": "aine",
-          "location": "a",
-          "email": "dieginpabon1808@gmail.com",
-          "phone": "asd"
-        }
-      ]
+      "products": []
     }
   ]
 }

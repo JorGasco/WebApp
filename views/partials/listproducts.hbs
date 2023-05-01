@@ -4,11 +4,10 @@
   <thead>
     <tr>
       <th class="four wide">Name</th>
-      <th class="four wide">Description</th>
-      <th class="two wide">Price</th>
-      <th class="two wide">Category</th>
-      <th class="two wide">Quantity</th>
-      <th class="two wide"></th>
+      <th class="four wide">Location</th>
+      <th class="two wide">Email</th>
+      <th class="two wide">Phone</th>
+     
       <th class="two wide"></th>
     </tr>
   </thead>
@@ -20,17 +19,15 @@
           <input type="text" name="name" required title="Please include a valid name" placeholder="Name" value="{{name}}">
         </td>
         <td class="field">
-          <input type="text" name="description" required title="Please include a valid description" placeholder="Description" value="{{description}}">
+          <input type="text" name="location" required title="Please include a valid location" placeholder="Location" value="{{location}}">
         </td>
         <td class="field">
-          <input type="text" name="price" required title="Please include a valid price" placeholder="Price" value="{{price}}">
+          <input type="text" name="email" required title="Please include a valid email" placeholder="Email" value="{{email}}">
         </td>
         <td class="field">
-          <input type="text" name="category" required title="Please include a valid category" placeholder="Category" value="{{category}}">
+          <input type="text" name="phone" required title="Please include a valid phone number" placeholder="Phone" value="{{phone}}">
         </td>
-        <td class="field">
-          <input type="text" name="quantity" required title="Please include a valid quantity" placeholder="Quantity" value="{{quantity}}">
-        </td>
+       
         <td class="center aligned">
           <button class="ui submit icon button"><i class="ui pencil alternate icon"></i></button>
         </td>
@@ -44,7 +41,6 @@
     {{/each}}
   </tbody>
 </table>
-
 <style>
   table.custom-table {
     margin-bottom: 2rem;

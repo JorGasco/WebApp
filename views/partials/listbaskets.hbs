@@ -1,71 +1,76 @@
-{{#each baskets}}
-  <section class="ui raised segment custom-segment">
-    <h2 class="ui header">
-      {{name}}
-    </h2>
-    <p> location: {{location}} </p>
-    <p> email: {{email}} </p>
-    <p> phone: {{phone}} </p>
-    <div class="ui two icon buttons">
-      <a href="/basket/{{id}}" class="ui icon button">
-        <i class="folder open icon"></i>
-      </a>
-      <a href="/dashboard/deletebasket/{{id}}" class="ui icon button delsupl">
-        <i class="trash icon"></i>
-      </a>
-    </div>
-  </section>
-{{/each}}
+{{> menu}}
+
+<div class="ui container">
+  <h2 class="ui header">List of Baskets</h2>
+  <table class="ui table custom-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Quantity</th>
+        <th>Image</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each baskets}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{description}}</td>
+        <td>{{price}}</td>
+        <td>{{category}}</td>
+        <td>{{quantity}}</td>
+        <td><img src="{{picture}}"></td>
+        <td>
+          <a href="/basket/{{id}}" class="ui button">View Suppliers</a>
+          <a href="/dashboard/deletebasket/{{id}}" class="ui button delbasket">Delete</a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
 
 <style>
-  .custom-segment {
-    background-color: #ffffff;
-    color: #1b4d89;
+  table.custom-table {
+    margin-bottom: 2rem;
+  }
+
+  table.custom-table thead th {
+    background-color: #1b4d89;
+    color: #ffffff;
     font-size: 1.2rem;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    text-align: center;
+    padding: 1rem;
   }
 
-  .custom-segment h2.ui.header {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #1b4d89;
+  table.custom-table tbody td.field input {
+    width: 100%;
   }
 
-  .custom-segment p {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: #333;
+  table.custom-table tbody td.center.aligned {
+    vertical-align: middle;
   }
 
-  .ui.raised.segment {
-    border: 2px solid #1b4d89;
-    box-shadow: none;
-  }
-
-  .ui.raised.segment:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-
-  .ui.two.icon.buttons .button {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    background-color: #6db784;
-    color: #ffffff;
-  }
-
-  .ui.two.icon.buttons .button:hover {
+  table.custom-table tbody tr:hover {
     background-color: #f9e45b;
+  }
+
+  table.custom-table tbody tr:hover td {
     color: #1b4d89;
   }
 
-  .ui.two.icon.buttons .delsupl.button {
+  table.custom-table tbody tr:hover .delbasket i {
+    color: #f9e45b;
+  }
+
+  table.custom-table tbody tr:hover .delbasket:hover i {
+    color: #1b4d89;
+  }
+
+  .ui.button {
     background-color: #f9e45b;
-    color: #1b4d89;
-  }
-
-  .ui.two.icon.buttons .delsupl.button:hover {
-    background-color: #6db784;
-    color: #ffffff;
   }
 </style>
