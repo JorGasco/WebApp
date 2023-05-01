@@ -33,50 +33,23 @@
       "products": []
     },
     {
-      "id": "ef0c892d-2eab-4182-9eb3-234f73d0ad90",
-      "userid": "4c5bb2ee-e27c-4564-b443-1a5290db6e10",
-      "name": "Áine",
-      "description": "beatiful girl",
-      "price": "infinite",
-      "category": "girlfriend",
-      "quantity": "only 1",
-      "picture": {
-        "name": "FWL_Sept_BlogImages_1_Warehouse.jpg",
-        "data": {
-          "type": "Buffer",
-          "data": []
-        },
-        "size": 139326,
-        "encoding": "7bit",
-        "tempFilePath": "/app/tmp/tmp-2-1682921963051",
-        "truncated": false,
-        "mimetype": "image/jpeg",
-        "md5": "abcf1998dd66baf73911d7e6c589d74a"
-      },
-      "products": []
-    },
-    {
-      "id": "d750d685-97ed-493d-ba23-ee6e1ecbbf96",
+      "id": "448e26e2-9ebd-43a7-afd8-0a4f1bfc1ca5",
       "userid": "4c5bb2ee-e27c-4564-b443-1a5290db6e10",
       "name": "Áine",
       "description": "lo",
-      "price": "infinite",
-      "category": "girlfriend",
-      "quantity": "5",
-      "picture": {
-        "name": "FWL_Sept_BlogImages_1_Warehouse.jpg",
-        "data": {
-          "type": "Buffer",
-          "data": []
-        },
-        "size": 139326,
-        "encoding": "7bit",
-        "tempFilePath": "/app/tmp/tmp-1-1682922726539",
-        "truncated": false,
-        "mimetype": "image/jpeg",
-        "md5": "abcf1998dd66baf73911d7e6c589d74a"
-      },
-      "products": []
+      "price": "erg",
+      "category": "eger",
+      "quantity": "gergeg",
+      "picture": "http://res.cloudinary.com/dymzmvn3j/image/upload/v1682923275/ozmrwodxwnecww9tyhzj.jpg",
+      "products": [
+        {
+          "id": "aa4e38d5-a511-42c6-8d6c-316b53946c00",
+          "name": "aine",
+          "location": "asd",
+          "email": "20098757@mail.wit.ie",
+          "phone": "asd"
+        }
+      ]
     }
   ]
 }

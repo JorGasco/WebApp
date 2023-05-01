@@ -65,8 +65,9 @@ const dashboard = {
       ],
     };
     logger.debug('Creating a new Basket' + newBasket);
-    basketStore.addBasket(newBasket);
-    response.redirect('/dashboard');
+    basketStore.addBasket(newBasket, function() {
+            response.redirect("/dashboard");
+      });
   },
 };
 
