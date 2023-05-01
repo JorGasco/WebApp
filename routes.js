@@ -12,26 +12,6 @@ import accounts from './controllers/accounts.js';
 
 
 
-const commentsStore = require('./commentsStore');
-
-app.post('/comments', function(req, res) {
-  const name = req.body.name;
-  const comment = req.body.comment;
-
-  const newComment = {
-    id: commentsStore.length + 1,
-    name: name,
-    comment: comment
-  };
-
-  commentsStore.push(newComment);
-
-  res.redirect('/about');
-});
-
-
-
-
 
 
 

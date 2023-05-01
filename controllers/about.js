@@ -4,7 +4,8 @@
 import logger from '../utils/logger.js';
 import developerStore from '../models/developer-store.js';
 import accounts from './accounts.js';
-
+import { v4 as uuidv4 } from 'uuid';
+import commentsStore from './comments-store.js';
 
 // create about object
 const about = {
@@ -29,7 +30,32 @@ const about = {
     else response.redirect('/');    
   },
   
+// AddComment method - responsible for adding a new comment to the comments store
+  addComment(request, response) {
+    const comment = request.body.comment;
+
+    // Check if comment is not empty
+    if (comment.trim().length > 0) {
+      const newComment = {
+        id: uuidv4(),
+        user: accounts.getCurrentUser(request),
+        date: new Date(),
+        comment: comment.trim(),
+      };
+
+      // Add the new comment to the comments store
+      commentsStore.addComment(newComment);
+
+      // Redirect to the about page
+      response.redirect('/about');
+    } else {
+      // If comment is empty, redirect to the about page with an error message
+      response.redirect('/about?error=comment');
+    }
+  },
 };
+
+
 
 // export the about module
 export default about;
