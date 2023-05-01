@@ -7,7 +7,7 @@ import dashboard from './controllers/dashboard.js';
 import about from './controllers/about.js';
 import basket from './controllers/basket.js';
 import accounts from './controllers/accounts.js';
-
+import commentStore from './models/commentStore.js';
 // connect routes to controllers
 router.get('/', accounts.index);
 router.get('/login', accounts.login);
@@ -21,7 +21,7 @@ router.get('/start', welcome.index);
 
 router.get('/dashboard', dashboard.index);
 router.get('/about', about.index);
-
+router.post('/about/comment', about.addComment);
 
 router.get('/basket/:id', basket.index);
 
