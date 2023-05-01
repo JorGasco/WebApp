@@ -13,6 +13,13 @@
       "email": "marge@simpson.com",
       "password": "secret",
       "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
+    },
+    {
+      "firstName": "Diego",
+      "lastName": "Pabon",
+      "email": "20098757@mail.wit.ie",
+      "password": "Secret123",
+      "id": "4c5bb2ee-e27c-4564-b443-1a5290db6e10"
     }
   ]
 }
