@@ -7,7 +7,7 @@ import dashboard from './controllers/dashboard.js';
 import about from './controllers/about.js';
 import basket from './controllers/basket.js';
 import accounts from './controllers/accounts.js';
-import comments from './controllers/comments.js';
+//import comments from './controllers/comments.js';
 
 
 
@@ -20,9 +20,12 @@ router.get('/logout', accounts.logout);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 
+//add routes for comments
 // add routes for comments
-router.post('/comments', comments.addComment);
-router.get('/comments', comments.getComments);
+
+
+//router.post('/comments', comments.addComment);
+//router.post('/comments', comments.getComments);
 
 
 // connect routes to controllers

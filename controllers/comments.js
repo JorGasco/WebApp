@@ -4,7 +4,7 @@
 import logger from '../utils/logger.js';
 import commentsStore from '../models/comments-store.js';
 import accounts from './accounts.js';
-
+import { v4 as uuidv4 } from 'uuid';
 
 // create comments object
 const comments = {
@@ -12,6 +12,7 @@ const comments = {
   // add comment method - responsible for adding a new comment to the store
   addComment(request, response) {
     const comment = {
+      id: uuidv4(),
       user: accounts.getCurrentUser(request).email,
       date: new Date(),
       text: request.body.comment
