@@ -40,15 +40,16 @@ name: request.body.name,
 description: request.body.description,
 price: request.body.price,
 category: request.body.category,
-quantity: request.body.quantity
+quantity: request.body.quantity,
+picture:  request.files.picture
 //picture: request.files.picture,
 };
 logger.debug("Creating a new Product" + newProduct);
-    productStore.addProduct(newPlaylist, function() {
-basketStore.addProduct(basketId, newProduct);
+    basket.addProduct(newProduct, function() {
+basket.addProduct(basketId, newProduct);
 response.redirect('/basket/' + basketId);
-},
-
+    });
+  },
 updateProduct(request, response) {
   
 const basketId = request.params.id;
