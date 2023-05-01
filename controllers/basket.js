@@ -30,6 +30,8 @@ response.redirect('/basket/' + basketId);
 },
   
 addProduct(request, response) {
+   const loggedInUser = accounts.getCurrentUser(request);
+  
 const basketId = request.params.id;
 const basket = basketStore.getBasket(basketId);
 const newProduct = {
@@ -39,13 +41,16 @@ description: request.body.description,
 price: request.body.price,
 category: request.body.category,
 quantity: request.body.quantity
-picture: request.files.picture,
+//picture: request.files.picture,
 };
+logger.debug("Creating a new Product" + newProduct);
+    productStore.addProduct(newPlaylist, function() {
 basketStore.addProduct(basketId, newProduct);
 response.redirect('/basket/' + basketId);
 },
 
 updateProduct(request, response) {
+  
 const basketId = request.params.id;
 const productId = request.params.productid;
 logger.debug("updating product " + productId);
