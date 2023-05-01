@@ -6,18 +6,6 @@ import basketStore from '../models/basket-store.js';
 import accounts from './accounts.js';
 import cloudinary from 'cloudinary';
 
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-
-try {
-  const env = require("../.data/.env.json");
-  cloudinary.config(env.cloudinary);
-}
-catch(e) {
-  logger.info('You must provide a Cloudinary credentials file - see README.md');
-  process.exit(1);
-}
-
 const basket = {
 index(request, response) {
 const basketId = request.params.id;
@@ -41,8 +29,7 @@ basketStore.removeProduct(basketId, productId);
 response.redirect('/basket/' + basketId);
 },
   
-async addProduct(request, response) {
-  function uploader(){
+addProduct(request, response) {
    const loggedInUser = accounts.getCurrentUser(request);
   
 const basketId = request.params.id;
@@ -58,8 +45,8 @@ picture:  request.files.picture
 //picture: request.files.picture,
 };
 logger.debug("Creating a new Product" + newProduct);
-    basket.addProduct(newProduct, function() {
-basket.addProduct(basketId, newProduct);
+    basketStore.addProduct(newProduct, function() {
+basketStore.addProduct(basketId, newProduct);
 response.redirect('/basket/' + basketId);
     });
   },
