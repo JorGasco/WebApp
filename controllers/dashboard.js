@@ -19,7 +19,7 @@ const  dashboard = {
     // create view data object (contains data to be sent to the view e.g. page title)
     const viewData = {
       title: 'Basket App Dashboard',
-      baskets: basketStore.getUserBasket(loggedInUser.id),
+      baskets: basketStore.getUserBaskets(loggedInUser.id),
       fullname: loggedInUser.firtname + ' ' + loggedInUser.lastName,
     };
 

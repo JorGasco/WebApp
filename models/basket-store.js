@@ -44,16 +44,9 @@ const arrayName = "products";
 this.store.editItem(this.collection, id, productId, arrayName, updatedProduct);
 },
   
-  getUserBaskets(userId) {
-  // Get all baskets from the store
-  const allBaskets = basketStore.getAllBaskets();
-
-  // Filter the baskets to only include those belonging to the user
-  const userBaskets = allBaskets.filter(basket => basket.userId === userId);
-
-  // Return the user's baskets
-  return userBaskets;
-}
+  getUserBaskets(userid) {
+ return this.store.findBy(this.collection, (basket => basket.userid === userid));
+},
 
 };
 
