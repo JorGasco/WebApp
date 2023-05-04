@@ -27,6 +27,13 @@
       "email": "diegoptwit@gmail.com",
       "password": "Digo123",
       "id": "eaf31cc1-904b-459e-874b-1d12df9b88eb"
+    },
+    {
+      "firstName": "Mary",
+      "lastName": "Lyng",
+      "email": "mlyng@setu.ie",
+      "password": "Trustno1",
+      "id": "b025fcb9-fa62-4c52-a590-b1392d511ec3"
     }
   ]
 }
