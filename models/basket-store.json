@@ -68,25 +68,6 @@
       "quantity": "gergeg",
       "picture": "http://res.cloudinary.com/dymzmvn3j/image/upload/v1682926118/bfbzkowvi5ientktvq5r.png",
       "products": []
-    },
-    {
-      "id": "27c7c294-5550-45bd-a7ee-a8dd7652c254",
-      "userid": "b025fcb9-fa62-4c52-a590-b1392d511ec3",
-      "name": "ff",
-      "description": "ff",
-      "price": "67",
-      "category": "ddd",
-      "quantity": "4",
-      "picture": "http://res.cloudinary.com/dymzmvn3j/image/upload/v1683208563/eozxlkusiul4btdsqagg.jpg",
-      "products": [
-        {
-          "id": "f0ea15b4-af8f-4d0b-aa31-91922af3f84e",
-          "name": "gg",
-          "location": "gg",
-          "email": "gg@gmIL.COM",
-          "phone": "gg"
-        }
-      ]
     }
   ]
 }
