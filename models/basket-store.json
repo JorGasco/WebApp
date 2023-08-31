@@ -2,7 +2,7 @@
   "basketCollection": [
     {
       "id": "0d3bf0a8-dfb9-49df-8d75-898c94aee804",
-      "name": "Áine",
+      "name": "Sports",
       "location": "waterford",
       "email": "20098757@mail.wit.ie",
       "phone": "08565465",
@@ -18,7 +18,7 @@
     },
     {
       "id": "b6c4a95d-12c8-4674-9fa5-0b54d3fe9ea0",
-      "name": "Áine",
+      "name": "Crocs",
       "location": "dfs",
       "email": "20098757@mail.wit.ie",
       "phone": "asd",
@@ -44,7 +44,7 @@
       "products": [
         {
           "id": "1b0f430e-b535-4789-9685-a9f4cce4dad0",
-          "name": "Áine",
+          "name": "Sports",
           "location": "waterford",
           "email": "20098757@mail.wit.ie",
           "phone": "12345"
