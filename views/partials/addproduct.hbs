@@ -1,18 +1,42 @@
 <form class="ui stacked segment form" action="/basket/{{basket.id}}/addproduct" method="POST">
   <div class="four fields">
     <div class="field">
-      <label for="name">Name</label>
-      <input placeholder="Name" type="text" name="name" autofocus required>
+      <label for ="name">Select a Supplier </label>
+      <select  placeholder="Title" type="text" name="name" autofocus required>
+       <option value="Nike">Nike</option>
+        <option value="Paris">Adidas</option>
+        <option value="Reebok" >Reebok</option>
+      </select>
     </div>
+    
     <div class="field">
-      <label for="location">Where is the next sale</label>
-      <input placeholder="Location" type="text" name="location" required>
+      <label for ="location">County</label>
+      <select  placeholder="Title" type="text" name="location" autofocus required>
+       <option value="Limerick">Limerick</option>
+        <option value="Dublin">Dublin</option>
+        <option value="Cork" >Cork</option>
+      </select>
     </div>
+    
     <div class="field">
-      <label for="email">Email</label>
-      <input placeholder="Email" type="email" name="email" required>
+      <label for ="email">Email</label>
+      <select  placeholder="email" type="email" name="email" autofocus required>
+       <option value="Limerick@nike.com">Limerick@nike.com</option>
+        <option value="Dublin">Dublin@nike.com</option>
+        <option value="Cork" >Cork@nike.com</option>
+        
+        <option value="Limerick@nike.com">Limerick@adidas.com</option>
+        <option value="Dublin@adidas.com">Dublin@adidas.com</option>
+        <option value="Cork@adidas.com" >Cork@adidas.com</option>
+        
+        <option value="Limerick@reebok.com">Limerick@reebok.com</option>
+        <option value="Dublin@reebok.com">Dublin@reebok.com</option>
+        <option value="Cork@reebok.com" >Cork@reebok.com</option>
+      </select>
     </div>
+    
     <div class="field">
+      
       <label for="phone">Phone</label>
       <input placeholder="Phone" type="tel" name="phone" required>
     </div>
