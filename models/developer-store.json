@@ -1,12 +1,13 @@
 {"developers":
   [
     {
-      "name":"Diego",
-      "fullname":"Diego Pabon",
-      "image":"https://cdn.glitch.com/7435e8d3-a4cc-4944-ba05-d703398351be%2Fstevie.jpg?1554913157488",
-      "job":"CEO",
-      "city":"'Company Products'",
-      "Age":21
+      "name":"Jorge",
+      "fullname":"Jorge Gasco",
+      "image":"https://cdn.glitch.com/7435e8d3-a4cc-4944-ba05-d703398351be%2Felliot.jpg?1554913157770",
+      "joined":2016,
+      "job":"CAO",
+      "city":"Waterford",
+      "mates":35
     }
     
   ]

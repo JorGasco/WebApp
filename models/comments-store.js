@@ -1,3 +1,17 @@
+import cloudinary from 'cloudinary';
+
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
+try {
+  const env = require("../.data/.env.json");
+  cloudinary.config(env.cloudinary);
+}
+catch(e) {
+  logger.info('You must provide a Cloudinary credentials file - see README.md');
+  process.exit(1);
+}
+
 'use strict';
 
 // import logger module

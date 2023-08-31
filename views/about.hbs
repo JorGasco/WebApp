@@ -1,109 +1,35 @@
 {{> menu id="about"}}
 
-<section class="ui center aligned middle aligned segment custom-segment" style="background-color: #1b4d89; color: #ffffff;">
-  <h2 class="ui header" style="color: #ffffff;">Company Owner</h2>
+<section class="ui center aligned middle aligned segment">
+  
+<section class="bestticket-section ui center aligned middle aligned segment">
+  <div class="bestticket-container">
+    <h2 class="bestticket-header">Garaje Sale App</h2>
 
-  <div class="ui centered cards">
-    {{#each developers}}
-      {{> card}}
-    {{/each}}
-  </div>
-</section>
+<p class="bestticket-description">
+  BestTicket is a company that specializes in finding the best prices for airline tickets and delivering them straight to your inbox.
+  With their advanced search algorithms and extensive network of travel partners, 
+  BestTicket is able to offer their customers unbeatable prices on flights to destinations all around the world. 
+  Whether you're planning a business trip, a family vacation, 
+  or just a quick weekend getaway, 
+  BestTicket has you covered. 
+  So why waste your time searching multiple websites for the best deal when you can let BestTicket do the work for you? Sign up today and start saving on your next flight!
+</p>
 
-<div class="mapouter" style="margin-top: 2rem;">
-  <div class="gmap_canvas">
-    <iframe width="432" height="423" id="gmap_canvas" 
-      src="https://maps.google.com/maps?q=Academia%20Paname%C3%B1a%20de%20Taekwondo&t=&z=19&ie=UTF8&iwloc=&output=embed" 
-      frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-    </iframe>
-    <a href="https://www.whatismyip-address.com/divi-discount/"></a>
-    <br>
-    <style>.mapouter{position:relative;text-align:right;height:423px;width:432px;}</style>
-    <a href="https://www.embedgooglemap.net">iframe google maps</a>
-    <style>.gmap_canvas {overflow:hidden;background:none!important;height:423px;width:432px;}</style>
-  </div>
+<div class="bestticket-cards">
+  {{#each developers}}
+    {{> card}}
+  {{/each}}
 </div>
 
+<div class="bestticket-map">
+  <div class="bestticket-office">
+    <h3>Our Office is in:</h3>
+  </div>
+  {{> map}}
+</div>
+  </div> 
+  {{> footer}}
+</section>
 
-
-
-
-
-<style>
-  .custom-segment {
-    background-color: #f9e45b;
-    background-image: url('https://www.example.com/background-image.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #333;
-    font-size: 1.2rem;
-    padding: 5rem;
-    margin-bottom: 2rem;
-  }
-
-  .custom-segment h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-  }
-
-  .ui.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .ui.card {
-    margin: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-  }
-
-  .ui.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  }
-
-  .ui.card .image {
-    height: 200px;
-    overflow: hidden;
-  }
-
-  .ui.card .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .ui.card .content {
-    text-align: center;
-  }
-
-  .ui.card .header {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #1b4d89;
-  }
-
-  .ui.card .description {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-
-  .ui.card .meta {
-    font-size: 1rem;
-    color: #666;
-  }
-
-  .ui.card .extra {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ffffff;
-  }
-
-  .ui.card .extra i {
-    margin-right: 0.5rem;
-  }
-</style>
+</section>
