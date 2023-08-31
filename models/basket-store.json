@@ -61,6 +61,17 @@
       "quantity": "gergeg",
       "picture": "http://res.cloudinary.com/dymzmvn3j/image/upload/v1682926118/bfbzkowvi5ientktvq5r.png",
       "products": []
+    },
+    {
+      "id": "8cb59b31-8dec-4cf7-90b2-5effda6c5b3e",
+      "userid": "b909037c-2a19-4c21-bcd9-32cd4b141ff4",
+      "name": "dasdsa",
+      "description": "dasdasd",
+      "price": "50",
+      "category": "saddas",
+      "quantity": "2",
+      "picture": "http://res.cloudinary.com/dymzmvn3j/image/upload/v1693513047/lbcuaj6daxmnb9ppavvc.jpg",
+      "products": []
     }
   ]
 }
