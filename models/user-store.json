@@ -34,6 +34,13 @@
       "email": "mlyng@setu.ie",
       "password": "Trustno1",
       "id": "b025fcb9-fa62-4c52-a590-b1392d511ec3"
+    },
+    {
+      "firstName": "Diego",
+      "lastName": "Pabon",
+      "email": "20098757@mail.wit.ie",
+      "password": "dIGO123DIEGO",
+      "id": "b2e50afb-ea58-44fb-a603-d2d32b353b3c"
     }
   ]
 }

@@ -43,13 +43,6 @@
       "picture": "http://res.cloudinary.com/dymzmvn3j/image/upload/v1682925101/ptarv27wgsry0hpkguvw.png",
       "products": [
         {
-          "id": "7d615ea3-e5be-46d9-ade2-e1b633bff907",
-          "name": "Nike.inc",
-          "location": "Usa",
-          "email": "nike@gmail.com",
-          "phone": "08565465"
-        },
-        {
           "id": "1b0f430e-b535-4789-9685-a9f4cce4dad0",
           "name": "Áine",
           "location": "waterford",
