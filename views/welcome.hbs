@@ -1,4 +1,4 @@
-{{> welcomeMenu id ="welcome"}}
+{{> menu}}
 
 <section class="welcome ui one column grid segment">
   <div class="ui column">
@@ -19,13 +19,26 @@
   <h3 class="ui center aligned header">Total of Suppliers and Products:</h3>
   <div class="ui two statistics">
       
-      <div class="ui huge statistic">
-          <div class="value">
-              {{totalProducts}}
+  
+          <div class="ui huge statistic">
+              <div class="value">
+                  {{totalBaskets}}
+              </div>
+              <div class="label">
+                  Orders
+              </div>
           </div>
-          <div class="label">
-              Products
+          <div class="ui huge statistic">
+              <div class="value">
+                  {{totalShoes}}
+              </div>
+              <div class="label">
+                  Suppliers
+              </div>
           </div>
+      </div>  
+       
+        
       </div>
   </div>
 </div>

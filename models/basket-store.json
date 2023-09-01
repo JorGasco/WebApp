@@ -63,17 +63,16 @@
       "products": []
     },
     {
-      "id": "8cb59b31-8dec-4cf7-90b2-5effda6c5b3e",
+      "id": "aa56e7ab-34ce-4123-a117-4fcb258ddd7e",
       "userid": "b909037c-2a19-4c21-bcd9-32cd4b141ff4",
-      "name": "dasdsa",
+      "name": "Adrian Ohr",
       "description": "dasdasd",
       "price": "50",
       "category": "saddas",
       "quantity": "2",
-      "picture": "http://res.cloudinary.com/dymzmvn3j/image/upload/v1693513047/lbcuaj6daxmnb9ppavvc.jpg",
       "products": [
         {
-          "id": "89ad5933-3efe-4f3c-851f-5045535be36c",
+          "id": "650248fa-07cc-49cd-8aa4-9062d8ee4379",
           "name": "Nike",
           "location": "Limerick",
           "email": "Limerick@nike.com",

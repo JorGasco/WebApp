@@ -30,7 +30,7 @@ const baskets = basketStore.getAllBaskets();
     const viewData = {
       title: 'Welcome Company Product Collection',
       totalBaskets: numBaskets,
-      totalSongs: numProducts,
+      totalShoes: numProducts,
       fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
     };
 
