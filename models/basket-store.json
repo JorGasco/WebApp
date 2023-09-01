@@ -77,6 +77,13 @@
           "location": "Limerick",
           "email": "Limerick@nike.com",
           "phone": "0838924091"
+        },
+        {
+          "id": "523741e5-188f-4b22-afed-570c7991b2d4",
+          "name": "Nike",
+          "location": "Limerick",
+          "email": "Limerick@nike.com",
+          "phone": "0838924091"
         }
       ]
     }
